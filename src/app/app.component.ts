@@ -1,3 +1,4 @@
+import { LoginPageModule } from './pages/login/login.module';
 import { Component } from '@angular/core';
 
 import { Platform } from '@ionic/angular';
@@ -11,6 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 
 export class AppComponent {
+  rootPage:any = 'LoginPage'
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
