@@ -1,0 +1,23 @@
+.bt-logar {
+    background-color: var(--pp-bg);
+}
+
+.bt-cadastrar {
+    background-color: var(--pp-preto);
+}
+
+a {
+    text-decoration: none;
+    display: flex;
+    
+}
+
+a ion-label{
+    text-align: right;
+    font-size: 12px;
+    color: var(--pp-bg);
+}
+
+.label-g {
+    font-size: 20px;
+}

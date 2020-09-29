@@ -3,6 +3,17 @@
 
 /** Ionic CSS Variables **/
 :root {
+  // Paleta
+  --pp-bg: #FF6870;
+  --pp-bg2: #F81D76;
+  --pp-bordas: #FF779C;
+  
+  --pp-preto: #090808;
+  --pp-branco: #fff;
+
+
+
+
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
@@ -74,6 +85,8 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  
 }
 
 @media (prefers-color-scheme: dark) {
