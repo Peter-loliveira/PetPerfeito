@@ -1,29 +1,44 @@
-<ion-content>
-  <div class=".bg-body">
-    <ion-title>Login</ion-title>
+<body>
+
+  <div class="campos-login">
+    <div class="superior">
+      <h1>Login</h1>
+      <img src="../../../assets/svg/logo.svg" alt="" class="logo">
+    </div>
+
     <ion-row>
-      <ion-col>
-        <ion-item>
+      <ion-col class="loginSenha" >
+        <ion-item color=var(--pp-preto)>
           <ion-label class="label-g" position="floating">Usuário</ion-label>
-          <ion-input></ion-input>
+          <ion-input tyupe = 'text'>
+            <img src="../../../assets/svg/user.svg" alt="" class="inputIcons">
+          </ion-input>
         </ion-item>
-        <ion-item>
+        <ion-item color=var(--pp-preto)>
           <ion-label class="label-g" position="floating">senha</ion-label>
-          <ion-input type='password'></ion-input>
+          <ion-input type='password'>
+            <a href="">
+              <img src="../../../assets/svg/showpass.svg" alt="" class="inputIcons">
+            </a>
+          </ion-input>
         </ion-item>
-        <ion-button expand="block">Logar</ion-button>
         <a href="">
-          <ion-label>Esqueceu sua senha?</ion-label>
+          <ion-label class="forgetpass">Esqueceu sua senha?</ion-label>
         </a>
       </ion-col>
     </ion-row>
-
-    <ion-footer>
-      <ion-row>
-        <ion-col>
-          <ion-button expand="full">Cadastrar-se</ion-button>
-        </ion-col>
-      </ion-row>
-    </ion-footer>
   </div>
-</ion-content>
+  <div class="logar">
+    <button class="bt-logar">Login</button>
+  </div>
+
+  <div class="footer">
+    <ion-row>
+      <ion-col>
+        <button class="bt-cadastrar" expand="full">Cadastrar-se</button>
+      </ion-col>
+    </ion-row>
+  </div>
+
+
+</body>

@@ -1,39 +1,112 @@
-// .bt-logar {
-//     background-color: var(--pp-bg);
-// }
+body {
+    background-image: linear-gradient(#FF6870, #FB4672);    
+    height: 100%;
+}
+
+.campos-login {
+    background-color: var(--pp-preto);
+    border-radius: 20px;
+    margin: 0 10px;
+    height: 60%;
+}
+
+.superior {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+h1{
+    color: var(--pp-branco);
+    border-bottom: 5px solid var(--pp-azul);
+    border-radius: 5px;
+}
+.bt-logar {
+    text-align: center;
+    background-color: var(--pp-bg2);
+    width: 150px;
+    border: 3px solid var(--pp-bordas);
+}
+
+.bt-cadastrar {
+    background-color: var(--pp-preto);
+    width: 90%;
+}
+
+.logar {
+    text-align: center;
+    margin-top: -30px;
+}
 
 
-// .bt-cadastrar {
-//     background-color: var(--pp-preto);
-// }
 
-// a {
-//     text-decoration: none;
-//     display: flex;
+button {
+    border-radius: 70px;
+    padding: 15px;
+    font-size: 20px;
+    color: var(--pp-branco);
+    font-weight: bolder;
+}
+
+
+a{
+    text-decoration: none;
+    display: flex;
+    text-align: right;
+    font-size: 12px;
+    color: var(--pp-branco);
+    margin-top: 10px;
+}
+
+.label-g {
+    color: var(--pp-cinza);
+    font-size: 15px;
     
-// }
+}
 
-// a ion-label{
-//     text-align: right;
-//     font-size: 12px;
-//     color: var(--pp-bg);
-// }
+.border {
+    border: 30px;
+    border-color: var(--pp-bordas);
+}
 
-// .label-g {
-//     font-size: 20px;
-// }
+.bg-body {
+    background-image: linear-gradient(#FF6870, #FB4672);
+}
 
+img {
+    // display: flex;
+    width: 50px;
+    // justify-content: flex-end;
+}
 
+ion-title {
+    text-align: center;
+}
 
-// .border {
-//     border: 30px;
-//     border-color: var(pp-bordas);
-// }
+div {
+    margin-top: 30px;
+}
 
-// .border_rad {
-//     border-radius: 20px;
-// }
+.footer{
+    margin-top: 50px;
+    text-align: center;
+}
 
-// .bg-body {
-//     background-image: linear-gradient(#FF6870, #FB4672);
-// }
+.inputIcons {
+    margin-left: -10px;
+    height: 25px;
+    padding-bottom: 10px;
+}
+
+.label-g{
+    margin-left: 60px;
+}
+
+.logo {
+    width: 80px;
+}
+
+.forgetpass {
+    text-align: right;
+    width: 100%;
+}
