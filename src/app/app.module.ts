@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 //Pages
 import { LoginPageModule } from './pages/login/login.module'
+import { CadastroUsuarioPageModule } from './pages/cadastro-usuario/cadastro-usuario.module'
+import { CadastroPetsPageModule } from './pages/cadastro-pets/cadastro-pets.module'
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +20,8 @@ import { LoginPageModule } from './pages/login/login.module'
   imports: [
     //Pages
     LoginPageModule,
+    CadastroUsuarioPageModule,
+    CadastroPetsPageModule,
     
     //others imports
     BrowserModule,
