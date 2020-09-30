@@ -1,16 +1,21 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
+//font
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;700;900&display=swap');
+
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
 
 /** Ionic CSS Variables **/
 :root {
   // Paleta
   --pp-bg: #FF6870;
-  --pp-bg2: #F81D76;
+  --pp-bg2: #FB4672;
   --pp-bordas: #FF779C;
-  
   --pp-preto: #090808;
   --pp-branco: #fff;
-
 
 
 
