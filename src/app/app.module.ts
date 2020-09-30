@@ -19,8 +19,9 @@ import { CadastroPetsPageModule } from './pages/cadastro-pets/cadastro-pets.modu
   entryComponents: [],
   imports: [
     //Pages
-    LoginPageModule,
     CadastroPetsPageModule,
+    LoginPageModule,
+    
     
     //others imports
     BrowserModule,
