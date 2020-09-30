@@ -12,12 +12,15 @@ import { AppRoutingModule } from './app-routing.module';
 //Pages
 import { LoginPageModule } from './pages/login/login.module'
 
+import { CadastroPetsPageModule } from './pages/cadastro-pets/cadastro-pets.module';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
     //Pages
     LoginPageModule,
+    CadastroPetsPageModule,
     
     //others imports
     BrowserModule,

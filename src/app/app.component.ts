@@ -1,4 +1,6 @@
-import { LoginPageModule } from './pages/login/login.module';
+//comentei aqui pq acho q esses imports n entram aqui.
+//import { LoginPageModule } from './pages/login/login.module';
+//import { CadastroPetsPageModule } from './pages/cadastro-pets/cadastro-pets.module';
 import { Component } from '@angular/core';
 
 import { Platform } from '@ionic/angular';
@@ -12,7 +14,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 
 export class AppComponent {
-  rootPage:any = 'LoginPage'
+  //rootPage:any = 'CadastroPetsPageModule'
+  rootPage:any = 'CadastroPetsPageModule'
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
