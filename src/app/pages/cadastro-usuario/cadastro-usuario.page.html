@@ -1,9 +1,30 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>cadastroUsuario</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <h1> Cadastro de Usuário</h1>
+<ion-item>
+  <ion-label position="floating">Primeiro Nome:</ion-label>
+  <ion-input type='text'></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Ultimo Nome:</ion-label>
+  <ion-input type='text'></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Data de Nascimento:</ion-label>
+  <ion-input type='date'></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">E-mail:</ion-label>
+  <ion-input type='Email'></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Senha:</ion-label>
+  <ion-input type='password'></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Confirmar senha:</ion-label>
+  <ion-input type='password'></ion-input>
+</ion-item>
+
+<ion-button expand="full" (click)="criarUsuario();">Cadastrar</ion-button>
 
 </ion-content>
