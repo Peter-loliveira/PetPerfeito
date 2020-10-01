@@ -1,9 +1,11 @@
 import { LoginPageModule } from './pages/login/login.module';
+import{CadastroUsuarioPageModule} from './pages/cadastro-usuario/cadastro-usuario.module';
 import { Component } from '@angular/core';
 
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +14,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 
 export class AppComponent {
-  rootPage:any = 'LoginPage'
+  //rootPage:any = 'LoginPage'
+    rootPage:any = 'CadastroUsuarioPage'
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
