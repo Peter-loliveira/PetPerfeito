@@ -1,6 +1,6 @@
 body {
+    background-image: linear-gradient(var(--pp-bg), var(--pp-bg2));    
     // background-image: linear-gradient(#ff9298, #FB4672);    
-    background-image: linear-gradient(#FF6870, #FB4672);    
     height: 100%;
 }
 
@@ -49,19 +49,24 @@ h1{
 
 .logar {
     text-align: center;
-    margin-top: -30px;
+    margin-top: -50px;
+}
+
+.footer{
+    text-align: center;
+    margin-top: 50px;
 }
 
 .bt-logar {
-    text-align: center;
     background-color: var(--pp-bg2);
-    width: 150px;
+    width: 60%;
     border: 3px solid var(--pp-bordas);
 }
 
 .bt-cadastrar {
     background-color: var(--pp-preto);
     width: 90%;
+    border: 3px solid var(--pp-bordas);
 }
 
 button {
@@ -86,12 +91,10 @@ a{
 }
 
 img {
-    // display: flex;
     width: 50px;
-    // justify-content: flex-end;
 }
 
-.footer{
-    margin-top: 50px;
-    text-align: center;
+.linksBotoes {
+    display: flex;
+    justify-content: center;
 }
