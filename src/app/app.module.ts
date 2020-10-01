@@ -20,8 +20,8 @@ import { CadastroPetsPageModule } from './pages/cadastro-pets/cadastro-pets.modu
   imports: [
     //Pages
     LoginPageModule,
-    CadastroUsuarioPageModule,
     CadastroPetsPageModule,
+    CadastroUsuarioPageModule,
     
     //others imports
     BrowserModule,
