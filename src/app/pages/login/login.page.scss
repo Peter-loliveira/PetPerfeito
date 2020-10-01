@@ -1,4 +1,5 @@
 body {
+    // background-image: linear-gradient(#ff9298, #FB4672);    
     background-image: linear-gradient(#FF6870, #FB4672);    
     height: 100%;
 }
@@ -8,6 +9,7 @@ body {
     border-radius: 20px;
     margin: 0 10px;
     height: 60%;
+    margin-top: 30px;
 }
 
 .superior {
@@ -20,7 +22,36 @@ h1{
     color: var(--pp-branco);
     border-bottom: 5px solid var(--pp-azul);
     border-radius: 5px;
+    padding-top: 15px;
 }
+
+.logo {
+    width: 80px;
+}
+
+.label-campos {
+    color: var(--pp-cinza);
+    font-size: 15px;
+    margin-left: 60px;
+    padding-top: 5px;
+}
+
+.inputIcons {
+    margin-left: -10px;
+    height: 25px;
+    padding-bottom: 10px;
+}
+
+.forgetpass {
+    text-align: right;
+    width: 100%;
+}
+
+.logar {
+    text-align: center;
+    margin-top: -30px;
+}
+
 .bt-logar {
     text-align: center;
     background-color: var(--pp-bg2);
@@ -33,13 +64,6 @@ h1{
     width: 90%;
 }
 
-.logar {
-    text-align: center;
-    margin-top: -30px;
-}
-
-
-
 button {
     border-radius: 70px;
     padding: 15px;
@@ -48,7 +72,6 @@ button {
     font-weight: bolder;
 }
 
-
 a{
     text-decoration: none;
     display: flex;
@@ -56,17 +79,6 @@ a{
     font-size: 12px;
     color: var(--pp-branco);
     margin-top: 10px;
-}
-
-.label-g {
-    color: var(--pp-cinza);
-    font-size: 15px;
-    
-}
-
-.border {
-    border: 30px;
-    border-color: var(--pp-bordas);
 }
 
 .bg-body {
@@ -79,34 +91,7 @@ img {
     // justify-content: flex-end;
 }
 
-ion-title {
-    text-align: center;
-}
-
-div {
-    margin-top: 30px;
-}
-
 .footer{
     margin-top: 50px;
     text-align: center;
-}
-
-.inputIcons {
-    margin-left: -10px;
-    height: 25px;
-    padding-bottom: 10px;
-}
-
-.label-g{
-    margin-left: 60px;
-}
-
-.logo {
-    width: 80px;
-}
-
-.forgetpass {
-    text-align: right;
-    width: 100%;
 }
