@@ -1,30 +1,38 @@
-<ion-content>
-  <h1> Cadastro de Usuário</h1>
-<ion-item>
-  <ion-label position="floating">Primeiro Nome:</ion-label>
-  <ion-input type='text'></ion-input>
-</ion-item>
-<ion-item>
-  <ion-label position="floating">Ultimo Nome:</ion-label>
-  <ion-input type='text'></ion-input>
-</ion-item>
-<ion-item>
-  <ion-label position="floating">Data de Nascimento:</ion-label>
-  <ion-input type='date'></ion-input>
-</ion-item>
-<ion-item>
-  <ion-label position="floating">E-mail:</ion-label>
-  <ion-input type='Email'></ion-input>
-</ion-item>
-<ion-item>
-  <ion-label position="floating">Senha:</ion-label>
-  <ion-input type='password'></ion-input>
-</ion-item>
-<ion-item>
-  <ion-label position="floating">Confirmar senha:</ion-label>
-  <ion-input type='password'></ion-input>
-</ion-item>
+<body>
+  <div class="campos-login">
+    <div class="superior">
+      <h1>Cadastro</h1>
+      <img src="../../../assets/svg/logo.svg" alt="" class="logo">
+    </div>
+    <ion-item>
+      <ion-label position="floating">Primeiro Nome:</ion-label>
+      <ion-input type='text'></ion-input>
+    </ion-item>
+    <!-- <ion-item>
+      <ion-label position="floating">Ultimo Nome:</ion-label>
+      <ion-input type='text'></ion-input>
+    </ion-item> -->
+    <ion-item>
+      <ion-label position="floating">Data de Nascimento:</ion-label>
+      <ion-input type='date'></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">E-mail:</ion-label>
+      <ion-input type='Email'></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Senha:</ion-label>
+      <ion-input type='password'></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Confirmar senha:</ion-label>
+      <ion-input type='password'></ion-input>
+    </ion-item>
+  </div>
 
-<ion-button expand="full" (click)="criarUsuario();">Cadastrar</ion-button>
-
-</ion-content>
+  <div class="footer logar">
+    <a href="/LoginPage" class='linksBotoes'>
+      <button class="bt-logar">Cadastrar</button>
+    </a>
+  </div>
+</body>
