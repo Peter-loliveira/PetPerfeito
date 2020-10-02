@@ -1,30 +1,57 @@
-<ion-content>
+<body>
+  <div class="campos-Cad">
+    <div class="superior">
+      <h1>Pets</h1>
+      <img src="../../../assets/svg/logo.svg" alt="" class="logo">
+    </div>
 
-  <ion-item>
-    <ion-label position="floating">Nome</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
+    <ion-item color=var(--pp-preto)>
+      <ion-label class="label-campos" position="floating">Nome</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
 
-  <ion-item>
-    <ion-label position="floating">Data de Nascimento</ion-label>
-    <ion-input type="date"></ion-input>
-  </ion-item>
+    <ion-item color=var(--pp-preto)>
+      <ion-label class="label-campos" position="floating">Nascimento</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
 
-  <ion-item>
-    <ion-label>Sexo</ion-label>
-    <ion-select placeholder="Selecione o Sexo">
-      <ion-select-option value="f">Macho</ion-select-option>
-      <ion-select-option value="m">Fêmea</ion-select-option>
-    </ion-select>
-  </ion-item>
+    <ion-item color=var(--pp-preto)>
+      <ion-label class="label-campos">Tipo</ion-label>
+      <ion-select class="label-branco">
+        <ion-select-option value="f">Cachorro</ion-select-option>
+        <ion-select-option value="m">Gato</ion-select-option>
+      </ion-select>
+    </ion-item>
 
-  <ion-item>
-    <ion-label position="floating">Raça</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
+    <ion-item color=var(--pp-preto)>
+      <ion-label class="label-campos">Raça</ion-label>
+      <ion-select class="label-branco">
+        <ion-select-option value="f">Raça 1</ion-select-option>
+        <ion-select-option value="m">Raça 2</ion-select-option>
+        <ion-select-option value="m">Raça 3</ion-select-option>
+        <ion-select-option value="m">Raça 4</ion-select-option>
+        <ion-select-option value="m">Raça 5</ion-select-option>
+        <ion-select-option value="m">Raça 6</ion-select-option>
+      </ion-select>
+    </ion-item>
 
-  <ion-checkbox></ion-checkbox>
-  <ion-label class="check-namoro">Habilitar Namoro</ion-label>
+    <ion-item color=var(--pp-preto)>
+      <ion-label class="label-campos">Sexo</ion-label>
+      <ion-select class="label-branco">
+        <ion-select-option value="f">Macho</ion-select-option>
+        <ion-select-option value="m">Fêmea</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item color=var(--pp-preto)>
+      <ion-checkbox checked></ion-checkbox>
+      <ion-label class="label-campos">Habilitar Namoro</ion-label>
+    </ion-item>
+  </div>
 
+  <div class="footer ">
+    <a href="/LoginPage" class='linksBotoes'>
+      <button class="bt-logar">Cadastrar</button>
+    </a>
+  </div>
 
-</ion-content>
+</body>

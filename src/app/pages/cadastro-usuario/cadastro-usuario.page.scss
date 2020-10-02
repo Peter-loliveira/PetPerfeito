@@ -4,9 +4,9 @@ body {
     height: 100%;
 }
 
-.campos-login {
+.campos-Cad {
     background-color: var(--pp-preto);
-    border-radius: 20px;
+    border-radius: 40px;
     margin: 0 10px;
     height: 80%;
     margin-top: 30px;
@@ -32,7 +32,6 @@ h1{
 .label-campos {
     color: var(--pp-cinza);
     font-size: 15px;
-    margin-left: 60px;
     padding-top: 5px;
 }
 
@@ -47,14 +46,14 @@ h1{
     width: 100%;
 }
 
-.logar {
-    text-align: center;
-    margin-top: -50px;
-}
+// .logar {
+//     text-align: center;
+//     margin-top: -50px;
+// }
 
 .footer{
     text-align: center;
-    margin-top: 50px;
+    margin-top: -40px;  
 }
 
 .bt-logar {
@@ -97,4 +96,8 @@ img {
 .linksBotoes {
     display: flex;
     justify-content: center;
+}
+
+.padding-inferior{
+    margin-bottom: 20px ;
 }
