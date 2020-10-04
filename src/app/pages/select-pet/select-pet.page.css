@@ -1,9 +1,3 @@
-*,
-:before,
-:after {
-  box-sizing: border-box;
-}
-
 body {
   background-image: linear-gradient(var(--pp-bg), var(--pp-bg2));
   height: 100%;

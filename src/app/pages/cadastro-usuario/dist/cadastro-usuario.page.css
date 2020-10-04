@@ -1,6 +1,5 @@
 body {
   background-image: linear-gradient(var(--pp-bg), var(--pp-bg2));
-  // background-image: linear-gradient(#ff9298, #FB4672);
   height: 100%;
 }
 
@@ -46,11 +45,6 @@ h1 {
   width: 100%;
 }
 
-// .logar {
-//     text-align: center;
-//     margin-top: -50px;
-// }
-
 .footer {
   text-align: center;
   margin-top: -40px;
@@ -86,7 +80,7 @@ a {
 }
 
 .bg-body {
-  background-image: linear-gradient(#ff6870, #fb4672);
+  background-image: linear-gradient(#FF6870, #FB4672);
 }
 
 img {

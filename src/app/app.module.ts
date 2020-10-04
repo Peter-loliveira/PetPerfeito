@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginPageModule } from './pages/login/login.module'
 import { CadastroUsuarioPageModule } from './pages/cadastro-usuario/cadastro-usuario.module'
 import { CadastroPetsPageModule } from './pages/cadastro-pets/cadastro-pets.module'
+import { SelectPetPageModule } from './pages/select-pet/select-pet.module'
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +23,7 @@ import { CadastroPetsPageModule } from './pages/cadastro-pets/cadastro-pets.modu
     LoginPageModule,
     CadastroUsuarioPageModule,
     CadastroPetsPageModule,
+    SelectPetPageModule,
     
     //others imports
     BrowserModule,
