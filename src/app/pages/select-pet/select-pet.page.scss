@@ -101,3 +101,14 @@ img {
 .padding-inferior{
     margin-bottom: 20px ;
 }
+
+.nomePet, .DescPet {
+    color: var(--pp-branco);
+    
+}
+
+.photoPet {
+    width: 150px;
+    border: 8px solid var(--pp-bordas);
+    border-radius: 50%;
+}
