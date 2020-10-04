@@ -1,5 +1,11 @@
+*,
+:before,
+:after {
+    box-sizing: border-box;
+}
+
 body {
-    background-image: linear-gradient(var(--pp-bg), var(--pp-bg2));    
+    background-image: linear-gradient(var(--pp-bg), var(--pp-bg2));
     // background-image: linear-gradient(#ff9298, #FB4672);    
     height: 100%;
 }
@@ -18,7 +24,7 @@ body {
     padding: 15px;
 }
 
-h1{
+h1 {
     color: var(--pp-branco);
     border-bottom: 5px solid var(--pp-azul);
     border-radius: 5px;
@@ -51,9 +57,9 @@ h1{
 //     margin-top: -50px;
 // }
 
-.footer{
+.footer {
     text-align: center;
-    margin-top: -40px;  
+    margin-top: -40px;
 }
 
 .bt-logar {
@@ -76,7 +82,7 @@ button {
     font-weight: bolder;
 }
 
-a{
+a {
     text-decoration: none;
     display: flex;
     text-align: right;
@@ -98,13 +104,14 @@ img {
     justify-content: center;
 }
 
-.padding-inferior{
-    margin-bottom: 20px ;
+.padding-inferior {
+    margin-bottom: 20px;
 }
 
-.nomePet, .DescPet {
+.nomePet,
+.DescPet {
     color: var(--pp-branco);
-    
+
 }
 
 .photoPet {
