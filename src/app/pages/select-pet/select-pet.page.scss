@@ -1,0 +1,103 @@
+body {
+    background-image: linear-gradient(var(--pp-bg), var(--pp-bg2));    
+    // background-image: linear-gradient(#ff9298, #FB4672);    
+    height: 100%;
+}
+
+.campos-Cad {
+    background-color: var(--pp-preto);
+    border-radius: 40px;
+    margin: 0 10px;
+    height: 80%;
+    margin-top: 30px;
+}
+
+.superior {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+h1{
+    color: var(--pp-branco);
+    border-bottom: 5px solid var(--pp-azul);
+    border-radius: 5px;
+    padding-top: 15px;
+}
+
+.logo {
+    width: 80px;
+}
+
+.label-campos {
+    color: var(--pp-cinza);
+    font-size: 15px;
+    padding-top: 5px;
+}
+
+.inputIcons {
+    margin-left: -10px;
+    height: 25px;
+    padding-bottom: 10px;
+}
+
+.forgetpass {
+    text-align: right;
+    width: 100%;
+}
+
+// .logar {
+//     text-align: center;
+//     margin-top: -50px;
+// }
+
+.footer{
+    text-align: center;
+    margin-top: -40px;  
+}
+
+.bt-logar {
+    background-color: var(--pp-bg2);
+    width: 60%;
+    border: 3px solid var(--pp-bordas);
+}
+
+.bt-cadastrar {
+    background-color: var(--pp-preto);
+    width: 90%;
+    border: 3px solid var(--pp-bordas);
+}
+
+button {
+    border-radius: 70px;
+    padding: 15px;
+    font-size: 20px;
+    color: var(--pp-branco);
+    font-weight: bolder;
+}
+
+a{
+    text-decoration: none;
+    display: flex;
+    text-align: right;
+    font-size: 12px;
+    color: var(--pp-branco);
+    margin-top: 10px;
+}
+
+.bg-body {
+    background-image: linear-gradient(#FF6870, #FB4672);
+}
+
+img {
+    width: 50px;
+}
+
+.linksBotoes {
+    display: flex;
+    justify-content: center;
+}
+
+.padding-inferior{
+    margin-bottom: 20px ;
+}

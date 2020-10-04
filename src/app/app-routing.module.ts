@@ -19,7 +19,11 @@ const routes: Routes = [
   {
     path: 'cadastro-pets',
     loadChildren: () => import('./pages/cadastro-pets/cadastro-pets.module').then( m => m.CadastroPetsPageModule)
+  },  {
+    path: 'select-pet',
+    loadChildren: () => import('./pages/select-pet/select-pet.module').then( m => m.SelectPetPageModule)
   },
+
 
 
 ];
