@@ -1,6 +1,5 @@
-body {
-    background-image: linear-gradient(var(--pp-bg), var(--pp-bg2));    
-    // background-image: linear-gradient(#ff9298, #FB4672);    
+ion-content {
+    --background: linear-gradient(var(--pp-bg), var(--pp-bg2));
     height: 100%;
 }
 
