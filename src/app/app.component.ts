@@ -12,7 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 
 export class AppComponent {
-  rootPage:any = 'LoginPage'
+  // rootPage:any = 'LoginPage'
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,

@@ -14,12 +14,15 @@ import { LoginPageModule } from './pages/login/login.module'
 import { CadastroUsuarioPageModule } from './pages/cadastro-usuario/cadastro-usuario.module'
 import { CadastroPetsPageModule } from './pages/cadastro-pets/cadastro-pets.module'
 import { SelectPetPageModule } from './pages/select-pet/select-pet.module'
+import { PagPrincipalPageModule } from './pages/pag-principal/pag-principal.module'
+
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
-    //Pages
+    //Pages 
+    PagPrincipalPageModule,
     LoginPageModule,
     CadastroUsuarioPageModule,
     CadastroPetsPageModule,
