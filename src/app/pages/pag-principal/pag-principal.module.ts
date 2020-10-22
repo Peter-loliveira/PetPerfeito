@@ -7,6 +7,10 @@ import { IonicModule } from '@ionic/angular';
 import { PagPrincipalPageRoutingModule } from './pag-principal-routing.module';
 
 import { PagPrincipalPage } from './pag-principal.page';
+import { BarraInferiorComponent } from 'src/app/components/barra-inferior/barra-inferior.component';
+
+//componentes
+
 
 @NgModule({
   imports: [
@@ -15,6 +19,6 @@ import { PagPrincipalPage } from './pag-principal.page';
     IonicModule,
     PagPrincipalPageRoutingModule
   ],
-  declarations: [PagPrincipalPage]
+  declarations: [PagPrincipalPage, BarraInferiorComponent]
 })
 export class PagPrincipalPageModule {}
