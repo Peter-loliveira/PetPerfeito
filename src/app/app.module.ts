@@ -23,8 +23,8 @@ import { PagPrincipalPageModule } from './pages/pag-principal/pag-principal.modu
   imports: [
     //Pages 
     PagPrincipalPageModule,
-    LoginPageModule,
     CadastroUsuarioPageModule,
+    LoginPageModule,
     CadastroPetsPageModule,
     SelectPetPageModule,
     
