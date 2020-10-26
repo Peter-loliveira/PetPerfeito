@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PagPrincipalPageRoutingModule } from './pag-principal-routing.module';
+import { ChatPageRoutingModule } from './chat-routing.module';
 
-import { PagPrincipalPage } from './pag-principal.page';
+import { ChatPage } from './chat.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PagPrincipalPageRoutingModule
+    ChatPageRoutingModule
   ],
-  declarations: [PagPrincipalPage]
+  declarations: [ChatPage]
 })
-export class PagPrincipalPageModule {}
+export class ChatPageModule {}

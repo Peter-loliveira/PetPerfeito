@@ -6,32 +6,13 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
-import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
-//Pages
-import { LoginPageModule } from './pages/login/login.module'
-import { CadastroUsuarioPageModule } from './pages/cadastro-usuario/cadastro-usuario.module'
-import { CadastroPetsPageModule } from './pages/cadastro-pets/cadastro-pets.module'
-import { SelectPetPageModule } from './pages/select-pet/select-pet.module'
-import { PagPrincipalPageModule } from './pages/pag-principal/pag-principal.module'
-
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [
-    //Pages 
-    PagPrincipalPageModule,
-    CadastroUsuarioPageModule,
-    LoginPageModule,
-    CadastroPetsPageModule,
-    SelectPetPageModule,
-    
-    //others imports
-    BrowserModule,
-    IonicModule.forRoot(), 
-    AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
     StatusBar,
     SplashScreen,

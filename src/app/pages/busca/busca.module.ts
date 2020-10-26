@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PagPrincipalPageRoutingModule } from './pag-principal-routing.module';
+import { BuscaPageRoutingModule } from './busca-routing.module';
 
-import { PagPrincipalPage } from './pag-principal.page';
+import { BuscaPage } from './busca.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PagPrincipalPageRoutingModule
+    BuscaPageRoutingModule
   ],
-  declarations: [PagPrincipalPage]
+  declarations: [BuscaPage]
 })
-export class PagPrincipalPageModule {}
+export class BuscaPageModule {}

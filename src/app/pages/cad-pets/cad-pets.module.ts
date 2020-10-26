@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PagPrincipalPageRoutingModule } from './pag-principal-routing.module';
+import { CadPetsPageRoutingModule } from './cad-pets-routing.module';
 
-import { PagPrincipalPage } from './pag-principal.page';
+import { CadPetsPage } from './cad-pets.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PagPrincipalPageRoutingModule
+    CadPetsPageRoutingModule
   ],
-  declarations: [PagPrincipalPage]
+  declarations: [CadPetsPage]
 })
-export class PagPrincipalPageModule {}
+export class CadPetsPageModule {}

@@ -1,5 +1,7 @@
 {
-  "name": "PetPerfeito",
-  "integrations": {},
+  "name": "PetPerfeitoTABS",
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

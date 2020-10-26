@@ -4,39 +4,33 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'LoginPage',
-    pathMatch: 'full'
+    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
-    path: 'LoginPage',
-    // loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
-  },
-  {
-    path: 'cadastro-usuario',
-    loadChildren: () => import('./pages/cadastro-usuario/cadastro-usuario.module').then( m => m.CadastroUsuarioPageModule)
-  },
-  {
-    path: 'cadastro-pets',
-    loadChildren: () => import('./pages/cadastro-pets/cadastro-pets.module').then( m => m.CadastroPetsPageModule)
-  },
-  {
-    path: 'select-pet',
-    loadChildren: () => import('./pages/select-pet/select-pet.module').then( m => m.SelectPetPageModule)
-  },  {
     path: 'pag-principal',
     loadChildren: () => import('./pages/pag-principal/pag-principal.module').then( m => m.PagPrincipalPageModule)
+  },
+  {
+    path: 'cad-pets',
+    loadChildren: () => import('./pages/cad-pets/cad-pets.module').then( m => m.CadPetsPageModule)
+  },
+  {
+    path: 'busca',
+    loadChildren: () => import('./pages/busca/busca.module').then( m => m.BuscaPageModule)
+  },
+  {
+    path: 'chat',
+    loadChildren: () => import('./pages/chat/chat.module').then( m => m.ChatPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   }
-
-
-
-
 ];
-
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
