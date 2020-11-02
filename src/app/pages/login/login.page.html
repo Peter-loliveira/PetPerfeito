@@ -10,7 +10,7 @@
       <ion-col>
         <ion-item color=var(--pp-preto)>
           <ion-label class="label-campos" position="floating">Usuário</ion-label>
-          <ion-input type = 'text'>
+          <ion-input type='text'>
             <img src="../../../assets/svg/user.svg" alt="" class="inputIcons">
           </ion-input>
         </ion-item>
@@ -29,19 +29,12 @@
     </ion-row>
   </div>
   <div class="logar">
-        <a href="../../tabs/tabs.page.html" class='linksBotoes'>
-          <button class="bt-logar">Login</button>
-        </a >
+    <ion-button size="large" fill='solid' shape="round" class="bt-logar" [routerLink]="['/tabs']">Entrar</ion-button>
   </div>
 
   <div class="footer">
-        <a href="/cadastro-usuario" class='linksBotoes'>
-          <button class="bt-cadastrar">Cadastrar-se</button>
-        </a>
-        
-        <a href="/select-pet" class='linksBotoes'>
-          <button class="bt-selecionar">Resultado Busca</button>
-        </a>
+    <ion-button  [routerLink]="['/cadUsu']" fill='solid' shape="round">Cadastrar-se</ion-button>
   </div>
+
 
 </ion-content>
