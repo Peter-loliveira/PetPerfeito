@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoginService } from 'src/app/services/LoginService';
+import { UsuarioService } from 'src/app/services/UsuarioService';
+import { Login } from 'src/models/Login';
 
 @Component({
   selector: 'app-login',
@@ -6,10 +10,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-
-  constructor() { }
+  public login: Login = new Login();
+  constructor(private _route: Router, private _loginService: LoginService, private _usuarioService: UsuarioService) { }
 
   ngOnInit() {
   }
 
+  fazerLogin(){
+    console.log(this.login)
+    this._loginService.login(this.login).subscribe((res) => {
+      this._usuarioService.logar(res);
+      this._route.navigate(['/pag-principal']);
+      console.log(res);
+    });
+  }
+
+
+  fazerCadastro(){
+    this._route.navigate(['/cad-usuario']);
+  }
+
 }
+
+  
+
+
