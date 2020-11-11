@@ -8,25 +8,38 @@
     <ion-rom>
       <ion-col>
         <ion-item color=var(--pp-preto)>
-          <ion-label class="label-campos" position="floating">Nome</ion-label>
-          <ion-input type='text'></ion-input>
+          <ion-label class="label-campos" position="floating">Nome:</ion-label>
+          <ion-input [(ngModel)]="usuario.nome" type= "text"></ion-input>
         </ion-item>
         <ion-item color=var(--pp-preto)>
-          <ion-label class="label-campos" position="floating">Nascimento</ion-label>
+          <ion-label class="label-campos" position="floating">Sexo:</ion-label>
+          <ion-input [(ngModel)]="usuario.sexo" type= "text"></ion-input>
+        </ion-item>
+        <ion-item color=var(--pp-preto)>
+          <ion-label class="label-campos" position="floating">Nascimento:</ion-label>
+     
           <!-- <ion-input type='text'></ion-input> -->
-          <ion-datetime displayFormat="DD MM YYYY" cancel-text = 'Cancela' done-text = 'OK' class="label-campos" placeholder="Selecione a data"></ion-datetime>
+          <ion-datetime displayFormat="DD MM YYYY" cancel-text = 'Cancela' done-text = 'OK' class="label-campos" [(ngModel)]="usuario.nascimento" placeholder="Selecione a data"></ion-datetime>
         </ion-item>
         <ion-item color=var(--pp-preto)>
           <ion-label class="label-campos" position="floating">E-mail:</ion-label>
-          <ion-input type='Email'></ion-input>
+          <ion-input [(ngModel)]="usuario.email" type= "email"></ion-input>
         </ion-item>
         <ion-item color=var(--pp-preto)>
+          <ion-label class="label-campos" position="floating">Cpf:</ion-label>
+          <ion-input [(ngModel)]="usuario.cpf" type= "text"></ion-input>
+          </ion-item>
+         <ion-item color=var(--pp-preto)>
+          <ion-label class="label-campos" position="floating">Login:</ion-label>
+          <ion-input [(ngModel)]="usuario.login" type= "text"></ion-input>
+        </ion-item> 
+        <ion-item color=var(--pp-preto)>
           <ion-label class="label-campos" position="floating">Senha:</ion-label>
-          <ion-input type='password'></ion-input>
+          <ion-input [(ngModel)]="usuario.senha" type= "password"></ion-input>
         </ion-item>
         <ion-item color=var(--pp-preto)>
           <ion-label class="label-campos" position="floating">Confirmar senha:</ion-label>
-          <ion-input type='password'></ion-input>
+          <ion-input [(ngModel)]="usuario.confirmarSenha" type= "password"></ion-input>
         </ion-item>
       </ion-col>
     </ion-rom>
@@ -34,7 +47,7 @@
 
   <div class="footer ">
     <a href="/LoginPage" class='linksBotoes'>
-      <button class="bt-logar">Cadastrar</button>
+      <button class="bt-logar" (click)="criarUsuario();">Cadastrar</button>
     </a>
   </div>
   
