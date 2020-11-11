@@ -1,9 +1,9 @@
 body {
     background-image: linear-gradient(var(--pp-bg), var(--pp-bg2));
-    // background-image: linear-gradient(#ff9298, #FB4672);
     height: 100%;
   }
   
+
   .campos-Cad {
     background-color: var(--pp-preto);
     border-radius: 40px;
@@ -12,6 +12,10 @@ body {
     margin-top: 30px;
   }
   
+  ion-list{
+    background-color: var(--pp-preto);
+  }
+
   .superior {
     display: flex;
     justify-content: space-between;
@@ -45,11 +49,6 @@ body {
     text-align: right;
     width: 100%;
   }
-  
-  // .logar {
-  //     text-align: center;
-  //     margin-top: -50px;
-  // }
   
   .footer {
     text-align: center;
@@ -105,4 +104,35 @@ body {
   ion-back-button {
     color: var(--pp-branco);
   }
+  
+  .item-radio {
+    margin-left: 10px;
+  }
+
+  ion-radio-group {
+    display: flex;
+    justify-content: space-between;
+    // width: 100%;
+    color: white;
+  }
+
+  .item-radio-F {
+    margin-left: 10px;
+  }
+  .item-radio-M {
+    width: 20px;
+  }
+
+  ion-item {
+    // background-color: #fb4672;
+    height: 3rem;
+    margin-top: -0.6rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .campoSenha {
+    width: 35%;
+  }
+
   
