@@ -1,0 +1,12 @@
+export class Pets{
+        public id: number = null;
+        public nome: string = null;
+        public nascimento:Date = null;
+        public tipo: string = null;
+        public raca: string = null;
+        public sexo: string = null;
+        public namoro: string=null;
+        public usuario_id: number = null;
+    
+
+}
