@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 //comentei aqui pq acho q esses imports n entram aqui.
 //import { LoginPageModule } from './pages/login/login.module';
 //import { CadastroPetsPageModule } from './pages/cadastro-pets/cadastro-pets.module';
+=======
+>>>>>>> 0b1b801b77f04f2f68c5f4e08da72218d8684312
 import { Component } from '@angular/core';
 
 import { Platform } from '@ionic/angular';
@@ -12,10 +15,12 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss']
 })
-
 export class AppComponent {
+<<<<<<< HEAD
   //rootPage:any = 'CadastroPetsPageModule'
   rootPage:any = 'CadastroPetsPageModule'
+=======
+>>>>>>> 0b1b801b77f04f2f68c5f4e08da72218d8684312
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,

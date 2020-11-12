@@ -1,23 +1,43 @@
 <ion-content>
+<<<<<<< HEAD
   <div class=".bg-body">
     <ion-title>Login</ion-title>
+=======
+
+  <div class="campos-login">
+    <div class="superior">
+      <h1>Login</h1>
+      <img src="../../../assets/svg/logo.svg" alt="" class="logo">
+    </div>
+
+>>>>>>> 0b1b801b77f04f2f68c5f4e08da72218d8684312
     <ion-row>
       <ion-col>
-        <ion-item>
-          <ion-label class="label-g" position="floating">Usuário</ion-label>
-          <ion-input></ion-input>
+        <ion-item color=var(--pp-preto)>
+          <ion-label class="label-campos" position="floating">Usuário</ion-label>
+          <ion-input type='text'>
+            <img src="../../../assets/svg/user.svg" alt="" class="inputIcons">
+          </ion-input>
         </ion-item>
-        <ion-item>
-          <ion-label class="label-g" position="floating">senha</ion-label>
-          <ion-input type='password'></ion-input>
+        <ion-item color=var(--pp-preto)>
+          <ion-label class="label-campos" position="floating">senha</ion-label>
+          <ion-input type='password'>
+            <a href="">
+              <img src="../../../assets/svg/showpass.svg" alt="" class="inputIcons">
+            </a>
+          </ion-input>
         </ion-item>
-        <ion-button expand="block">Logar</ion-button>
         <a href="">
-          <ion-label>Esqueceu sua senha?</ion-label>
+          <ion-label class="forgetpass">Esqueceu sua senha?</ion-label>
         </a>
       </ion-col>
     </ion-row>
+  </div>
+  <div class="logar">
+    <ion-button size="large" fill='solid' shape="round" class="bt-logar" [routerLink]="['/tabs']">Entrar</ion-button>
+  </div>
 
+<<<<<<< HEAD
     <ion-footer>
       <ion-row>
         <ion-col>
@@ -25,5 +45,11 @@
         </ion-col>
       </ion-row>
     </ion-footer>
+=======
+  <div class="footer">
+    <ion-button  [routerLink]="['/cadUsu']" fill='solid' shape="round">Cadastrar-se</ion-button>
+>>>>>>> 0b1b801b77f04f2f68c5f4e08da72218d8684312
   </div>
+
+
 </ion-content>
