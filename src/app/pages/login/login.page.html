@@ -10,12 +10,12 @@
       <ion-col>
         <ion-item color=var(--pp-preto)>
           <ion-label class="label-campos" position="floating">Usuário</ion-label>
-          <ion-input type="text" [(ngModel)]="login.login"></ion-input>
+          <ion-input color=light type="text" [(ngModel)]="login.login"></ion-input>
             <img src="../../../assets/svg/user.svg" alt="" class="inputIcons">
         </ion-item>
         <ion-item color=var(--pp-preto)>
           <ion-label class="label-campos" position="floating">senha</ion-label>
-          <ion-input type= "password"[(ngModel)]="login.senha">
+          <ion-input color=light type= "password"[(ngModel)]="login.senha">
             <a href="">
               <img src="../../../assets/svg/showpass.svg" alt="" class="inputIcons">
             </a>
@@ -33,7 +33,7 @@
   </div>
 
   <div class="footer">
-    <ion-button  [routerLink]="['/cadUsu']" fill='solid' shape="round">Cadastrar-se</ion-button>
+    <ion-button  [routerLink]="['/cad-usuario']" fill='solid' shape="round">Cadastrar-se</ion-button>
   </div>
 
 

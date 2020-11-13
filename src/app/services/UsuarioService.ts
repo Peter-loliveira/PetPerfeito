@@ -4,27 +4,26 @@ import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import{HttpClient} from '@angular/common/http';
 import { Global } from 'src/theme/shared/Global';
+
 @Injectable({
     'providedIn': 'root'
 })
 export class UsuarioService implements IUsuarioService {
-  
-   
-    public apiUrl: string = Global.ApiUrl+"usuarios";
+     
+    public apiUrl: string = Global.ApiUrl + "usuarios";
     
-    constructor(private _httpClient: HttpClient) {
+    constructor(private _httpClient: HttpClient) {}
 
-    
-    }
-    buscarUsuario(): Observable<Usuario> {
-        const usuario: Usuario = this.retornarUsuarioLogado();
-        return this._httpClient.get<Usuario>(`${this.apiUrl}/${usuario.id}`);
-    }
+    // buscarUsuario(): Observable<Usuario> {
+    //     const usuario: Usuario = this.retornarUsuarioLogado();
+    //     return this._httpClient.get<Usuario>(`${this.apiUrl}/${usuario.id}`);
+    // }
     
     logout(): void {
         //localStorage.removeItem('usuariologado')
         localStorage.clear();
     }
+
     cadastrar(usuario: Usuario): Observable<Usuario> {
         if (!usuario.nome) throw new Error ('O campo Nome é obrigatorio.')
         if (!usuario.sexo) throw new Error ('O campo Sexo é obrigatorio.')
@@ -34,7 +33,10 @@ export class UsuarioService implements IUsuarioService {
         if (!usuario.login) throw new Error ('O campo Login é obrigatorio.')
         if (!usuario.senha) throw new Error ('O campo Senha é obrigatorio.')
         if (usuario.senha != usuario.confirmarSenha) throw new Error (' As senhas não coincidem.')
-        throw new Error(" Já pode salvar.");
+        
+        console.log(usuario)
+        return this._httpClient.post<Usuario>(this.apiUrl, usuario)
+        
     }
 
     atualizar(usuario: Usuario): Observable<Usuario> {
@@ -44,6 +46,7 @@ export class UsuarioService implements IUsuarioService {
     logar(usuario: Usuario): void {
         localStorage.setItem('usuarioLogado', JSON.stringify(usuario));
     }
+
     retornarUsuarioLogado(): Usuario {
         let usuario:Usuario = JSON.parse(localStorage.getItem('usuarioLogado'));
         return usuario;

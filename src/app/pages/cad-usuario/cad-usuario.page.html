@@ -4,61 +4,74 @@
       <h1>Cadastro</h1>
       <img src="../../../assets/svg/logo.svg" alt="" class="logo">
     </ion-header>
-    
+
     <ion-row>
       <ion-col>
 
-        <ion-list  lines="full" class="ion-no-margin">
-        
-        <ion-item color=var(--pp-preto)>
-          <ion-label color = light class="label-campos" >Nome:</ion-label>
-          <ion-input color = light [(ngModel)]="usuario.nome" type= "text"></ion-input>
-        </ion-item>
-          <ion-radio-group color=var(--pp-preto)>
+        <ion-list lines="full" class="ion-no-margin">
+
+          <ion-item color=var(--pp-preto)>
+            <ion-label color=light class="label-campos">Nome:</ion-label>
+            <ion-input color=light [(ngModel)]="usuario.nome" type="text"></ion-input>
+          </ion-item>
+
+          <!-- <ion-radio-group color=var(--pp-preto)>
             <ion-item color=var(--pp-preto)>
-              <ion-label color = light class="label-sexo">Sexo:</ion-label>
+              <ion-label color=light class="label-sexo">Sexo:</ion-label>
             </ion-item>
             <ion-item color=var(--pp-preto)>
               <ion-radio class="item-radio-M" value="M"></ion-radio>
-              <ion-label color = light class="item-radio item-radio-M">M</ion-label>
+              <ion-label color=light class="item-radio item-radio-M">M</ion-label>
               <ion-radio class="item-radio-F" value="F"></ion-radio>
-              <ion-label color = light class="item-radio">F</ion-label>
+              <ion-label color=light class="item-radio">F</ion-label>
             </ion-item>
-          </ion-radio-group>
-        <ion-item color=var(--pp-preto)>
-          <ion-label color = light class="label-campos" >Nascimento:</ion-label>
-          <ion-datetime color = light displayFormat="DD MM YYYY" cancel-text = 'Cancela' done-text = 'OK' class="label-campos" [(ngModel)]="usuario.nascimento" placeholder="Selecione a data"></ion-datetime>
-        </ion-item>
-        <ion-item color=var(--pp-preto)>
-          <ion-label color = light class="label-campos" >E-mail:</ion-label>
-          <ion-input color = light [(ngModel)]="usuario.email" type= "email"></ion-input>
-        </ion-item>
-        <ion-item color=var(--pp-preto)>
-          <ion-label color = light class="label-campos" >CPF:</ion-label>
-          <ion-input color = light [(ngModel)]="usuario.cpf" type= "text"></ion-input>
+          </ion-radio-group> -->
+          <ion-item color=var(--pp-preto)>
+            <ion-label color=light class="label-campos">sexo:</ion-label>
+            <ion-input color=light [(ngModel)]="usuario.sexo" type="email"></ion-input>
+            
           </ion-item>
-         <ion-item color=var(--pp-preto)>
-          <ion-label color = light class="label-campos" >Login:</ion-label>
-          <ion-input color = light [(ngModel)]="usuario.login" type= "text"></ion-input>
-        </ion-item> 
-        <ion-item color=var(--pp-preto)>
-          <ion-label color = light color = light class="label-campos campoSenha" >Senha:</ion-label>
-          <ion-input color = light [(ngModel)]="usuario.senha" type= "password"></ion-input>
-        </ion-item>
-        <ion-item color=var(--pp-preto)>
-          <ion-label color = light class="label-campos campoSenha" >Confirme:</ion-label>
-          <ion-input color = light [(ngModel)]="usuario.confirmarSenha" type= "password"></ion-input>
-        </ion-item>
-      </ion-list>
+
+          <ion-item color=var(--pp-preto)>
+            <ion-label color=light class="label-campos">Nascimento:</ion-label>
+            <ion-input color=light [(ngModel)]="usuario.nascimento" type="text"></ion-input>
+            <!-- <ion-datetime color=light displayFormat="DD MM YYYY" cancel-text='Cancela' done-text='OK'
+              class="label-campos" [(ngModel)]="usuario.nascimento" placeholder="Selecione a data"></ion-datetime> -->
+          </ion-item>
+
+          <ion-item color=var(--pp-preto)>
+            <ion-label color=light class="label-campos">E-mail:</ion-label>
+            <ion-input color=light [(ngModel)]="usuario.email" type="email"></ion-input>
+          </ion-item>
+
+          <ion-item color=var(--pp-preto)>
+            <ion-label color=light class="label-campos">CPF:</ion-label>
+            <ion-input color=light [(ngModel)]="usuario.cpf" type="text"></ion-input>
+          </ion-item>
+
+          <ion-item color=var(--pp-preto)>
+            <ion-label color=light class="label-campos">Login:</ion-label>
+            <ion-input color=light [(ngModel)]="usuario.login" type="text"></ion-input>
+          </ion-item>
+
+          <ion-item color=var(--pp-preto)>
+            <ion-label color=light color=light class="label-campos campoSenha">Senha:</ion-label>
+            <ion-input color=light [(ngModel)]="usuario.senha" type="password"></ion-input>
+          </ion-item>
+
+          <ion-item color=var(--pp-preto)>
+            <ion-label color=light class="label-campos campoSenha">Confirme:</ion-label>
+            <ion-input color=light [(ngModel)]="usuario.confirmarSenha" type="password"></ion-input>
+          </ion-item>
+          
+        </ion-list>
       </ion-col>
     </ion-row>
-    
+
   </div>
 
-  <div class="footer ">
-    <a href="/LoginPage" class='linksBotoes'>
+  <div class="footer ">    
       <button class="bt-logar" (click)="criarUsuario();">Cadastrar</button>
-    </a>
   </div>
-  
+
 </body>

@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from 'src/app/services/UsuarioService';
 import { Usuario } from 'src/models/Usuario';
@@ -10,10 +11,12 @@ import { Usuario } from 'src/models/Usuario';
 export class CadUsuarioPage implements OnInit {
   
   public usuario: Usuario = new Usuario();
-  constructor(private _usuarioService: UsuarioService,) {
-    console.log(this.usuario);
-  
-   }
+  constructor(
+    private _usuarioService: UsuarioService,
+    private _route: Router
+    ) {
+
+  }
 
   ngOnInit() {
   }
@@ -21,6 +24,12 @@ export class CadUsuarioPage implements OnInit {
 
   criarUsuario() {
     console.log(this.usuario)
-    this._usuarioService.cadastrar(this.usuario);
+    this._usuarioService.cadastrar(this.usuario).subscribe(res => {
+      console.log(res);
+    });
+    
+    let mensagemAlerta: string = 'Cadastro realizado com sucesso. Bem vindo ' + this.usuario.nome
+    alert(mensagemAlerta)
+    this._route.navigate(['/login'])
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { LoginService } from 'src/app/services/LoginService';
 import { UsuarioService } from 'src/app/services/UsuarioService';
 import { Login } from 'src/models/Login';
@@ -11,7 +12,10 @@ import { Login } from 'src/models/Login';
 })
 export class LoginPage implements OnInit {
   public login: Login = new Login();
-  constructor(private _route: Router, private _loginService: LoginService, private _usuarioService: UsuarioService) { }
+  constructor(
+    private _route: Router, 
+    private _loginService: LoginService, 
+    private _usuarioService: UsuarioService) { }
 
   ngOnInit() {
   }
@@ -20,10 +24,23 @@ export class LoginPage implements OnInit {
     console.log(this.login)
     this._loginService.login(this.login).subscribe((res) => {
       this._usuarioService.logar(res);
-      this._route.navigate(['/pag-principal']);
+      this._route.navigate(['/tabs']);
       console.log(res);
     });
   }
+
+
+/**
+ *  fazerLogin() {
+    console.log(this.login);
+    this._loginService.login(this.login).subscribe((res) => {
+      this._usuarioService.logar(res)
+      this._route.navigate(['/lista-carros']);
+      console.log(res)
+    });
+ * 
+ */
+  
 
 
   fazerCadastro(){
