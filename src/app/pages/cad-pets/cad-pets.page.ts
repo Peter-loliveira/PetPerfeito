@@ -12,4 +12,8 @@ export class CadPetsPage implements OnInit {
   ngOnInit() {
   }
 
+  cadastrarPet() {
+    
+  }
+
 }

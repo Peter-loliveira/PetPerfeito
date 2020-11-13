@@ -1,14 +1,25 @@
-<body>
+<ion-content>
 
-  <div>
-    <h1>Página Principal</h1>
-    <p>Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean
-      sit amet nisi. Atirei o pau no gatis, per gatis num morreus. Copo furadis é disculpa de bebadis, arcu quam euismod
-      magna. Si num tem leite então bota uma pinga aí cumpadi!
-      Diuretics paradis num copo é motivis de denguis. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que
-      eu levo! Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Casamentiss faiz malandris se pirulitá.
-    </p>
-  </div>
-  
+  <ion-grid >
 
-</body>
+    <h1>{{ _usuarioLogado.nome }}</h1>
+    <ion-row *ngIf = 'pets.length > 0'>
+
+      <ionn-col>
+          Lista de PETs cadastrados
+      </ionn-col>
+
+    </ion-row>
+    
+    <ion-row *ngIf = 'pets.length == 0'>
+
+      <ion-col>
+          <h3>Você ainda não possui nenhum PET cadastrado</h3>
+          <ion-button (click) = 'cadastrarPrimeiroPet()'>Cadastre seu primeiro</ion-button>
+      </ion-col>
+
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

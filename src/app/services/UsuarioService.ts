@@ -14,13 +14,13 @@ export class UsuarioService implements IUsuarioService {
     
     constructor(private _httpClient: HttpClient) {}
 
-    // buscarUsuario(): Observable<Usuario> {
-    //     const usuario: Usuario = this.retornarUsuarioLogado();
-    //     return this._httpClient.get<Usuario>(`${this.apiUrl}/${usuario.id}`);
-    // }
+    buscarUsuario(): Observable<Usuario> {
+        const usuario: Usuario = this.retornarUsuarioLogado();
+        return this._httpClient.get<Usuario>(`${this.apiUrl}/${usuario.id}`);
+    }
     
     logout(): void {
-        //localStorage.removeItem('usuariologado')
+        localStorage.removeItem('usuariologado')
         localStorage.clear();
     }
 
@@ -43,6 +43,7 @@ export class UsuarioService implements IUsuarioService {
         
         throw new Error("Method not implemented.");
     }
+
     logar(usuario: Usuario): void {
         localStorage.setItem('usuarioLogado', JSON.stringify(usuario));
     }

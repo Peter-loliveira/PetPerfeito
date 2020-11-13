@@ -6,12 +6,12 @@
     </div>
 
     <ion-item color=var(--pp-preto)>
-      <ion-label class="label-campos" position="floating">Nome</ion-label>
+      <ion-label class="label-campos" >Nome</ion-label>
       <ion-input color=light type="text"></ion-input>
     </ion-item>
 
     <ion-item color=var(--pp-preto)>
-      <ion-label class="label-campos" position="floating">Nascimento</ion-label>
+      <ion-label class="label-campos" >Nascimento</ion-label>
       <ion-input color=light type="text"></ion-input>
       <!-- <ion-datetime displayFormat="DD MM YYYY" cancel-text = 'Cancela' done-text = 'OK' class="label-campos" placeholder="Selecione a data"></ion-datetime> -->
     </ion-item>
@@ -52,8 +52,8 @@
     </div>
   </div>
 
-  <div>
-      <button class="bt-logar">Cadastrar</button>
+  <div class="logar">
+    <ion-button size="large" fill='solid' shape="round" class="bt-logar" (click) = 'cadastrarPet()'>Cadastrar Pet</ion-button>
   </div>
 
 </body>

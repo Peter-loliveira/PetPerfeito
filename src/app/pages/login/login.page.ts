@@ -29,20 +29,6 @@ export class LoginPage implements OnInit {
     });
   }
 
-
-/**
- *  fazerLogin() {
-    console.log(this.login);
-    this._loginService.login(this.login).subscribe((res) => {
-      this._usuarioService.logar(res)
-      this._route.navigate(['/lista-carros']);
-      console.log(res)
-    });
- * 
- */
-  
-
-
   fazerCadastro(){
     this._route.navigate(['/cad-usuario']);
   }
