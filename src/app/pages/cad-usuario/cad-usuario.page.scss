@@ -56,16 +56,17 @@ body {
   }
   
   .bt-logar {
+    margin-top: 1rem;
     background-color: var(--pp-bg2);
     width: 60%;
     border: 3px solid var(--pp-bordas);
   }
   
-  .bt-cadastrar {
-    background-color: var(--pp-preto);
-    width: 90%;
-    border: 3px solid var(--pp-bordas);
-  }
+  // .bt-cadastrar {
+  //   background-color: var(--pp-preto);
+  //   width: 90%;
+  //   border: 3px solid var(--pp-bordas);
+  // }
   
   button {
     border-radius: 70px;
@@ -112,7 +113,6 @@ body {
   ion-radio-group {
     display: flex;
     justify-content: space-between;
-    // width: 100%;
     color: white;
   }
 
@@ -124,7 +124,6 @@ body {
   }
 
   ion-item {
-    // background-color: #fb4672;
     height: 3rem;
     margin-top: -0.6rem;
     display: flex;
