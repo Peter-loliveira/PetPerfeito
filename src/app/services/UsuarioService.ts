@@ -1,8 +1,8 @@
 import { IUsuarioService } from 'src/app/interfaces/IUsuarioService';
 import { Usuario } from 'src/models/Usuario';
+import{HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
-import{HttpClient} from '@angular/common/http';
 import { Global } from 'src/theme/shared/Global';
 
 @Injectable({
@@ -12,7 +12,7 @@ export class UsuarioService implements IUsuarioService {
      
     public apiUrl: string = Global.ApiUrl + "usuarios";
     
-    constructor(private _httpClient: HttpClient) {}
+    constructor( private _httpClient: HttpClient ) {}
 
     buscarUsuario(): Observable<Usuario> {
         const usuario: Usuario = this.retornarUsuarioLogado();
@@ -36,7 +36,6 @@ export class UsuarioService implements IUsuarioService {
         
         console.log(usuario)
         return this._httpClient.post<Usuario>(this.apiUrl, usuario)
-        
     }
 
     atualizar(usuario: Usuario): Observable<Usuario> {

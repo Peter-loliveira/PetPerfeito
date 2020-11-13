@@ -6,19 +6,19 @@
     </div>
 
     <ion-item color=var(--pp-preto)>
-      <ion-label class="label-campos" >Nome</ion-label>
-      <ion-input color=light type="text"></ion-input>
+      <ion-label class="label-campos">Nome</ion-label>
+      <ion-input color=light type="text" [(ngModel)]="pet.nome"></ion-input>
     </ion-item>
 
     <ion-item color=var(--pp-preto)>
-      <ion-label class="label-campos" >Nascimento</ion-label>
-      <ion-input color=light type="text"></ion-input>
+      <ion-label class="label-campos">Nascimento</ion-label>
+      <ion-input color=light type="text" [(ngModel)]="pet.nascimento"></ion-input>
       <!-- <ion-datetime displayFormat="DD MM YYYY" cancel-text = 'Cancela' done-text = 'OK' class="label-campos" placeholder="Selecione a data"></ion-datetime> -->
     </ion-item>
 
     <ion-item color=var(--pp-preto)>
       <ion-label class="label-campos">Tipo</ion-label>
-      <ion-input color=light type="text"></ion-input>
+      <ion-input color=light type="text" [(ngModel)]="pet.tipo"></ion-input>
       <!-- <ion-select class="label-branco">
         <ion-select-option value="f">Cachorro</ion-select-option>
         <ion-select-option value="m">Gato</ion-select-option>
@@ -27,7 +27,7 @@
 
     <ion-item color=var(--pp-preto)>
       <ion-label class="label-campos">Raça</ion-label>
-      <ion-input color=light type="text"></ion-input>
+      <ion-input color=light type="text" [(ngModel)]="pet.raca"></ion-input>
       <!-- <ion-select class="label-branco">
         <ion-select-option value="f">Raça 1</ion-select-option>
         <ion-select-option value="m">Raça 2</ion-select-option>
@@ -40,20 +40,24 @@
 
     <ion-item color=var(--pp-preto)>
       <ion-label class="label-campos">Sexo</ion-label>
-      <ion-input color=light type="text"></ion-input>
+      <ion-input color=light type="text" [(ngModel)]="pet.sexo"></ion-input>
       <!-- <ion-select class="label-branco">
         <ion-select-option value="f">Macho</ion-select-option>
         <ion-select-option value="m">Fêmea</ion-select-option>
       </ion-select> -->
     </ion-item>
-    <div class = 'HabilitaNamoro' color=var(--pp-preto)>
-      <ion-toggle checked></ion-toggle>
-      <ion-label class="label-campos">Habilitar Namoro</ion-label>
+    <div class='HabilitaNamoro' color=var(--pp-preto)>
+      <!-- <ion-toggle checked></ion-toggle> -->
+      <ion-item color=var(--pp-preto)>
+        <ion-label class="label-campos">Habilitar Namoro</ion-label>
+        <ion-input color=light type='text' [(ngModel)]="pet.namoro"></ion-input>
+      </ion-item>
     </div>
   </div>
 
   <div class="logar">
-    <ion-button size="large" fill='solid' shape="round" class="bt-logar" (click) = 'cadastrarPet()'>Cadastrar Pet</ion-button>
+    <ion-button size="large" fill='solid' shape="round" class="bt-logar" (click)='cadastrarPet()'>Cadastrar Pet
+    </ion-button>
   </div>
 
 </body>
