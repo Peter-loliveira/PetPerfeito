@@ -39,7 +39,7 @@ h1{
     color: var(--pp-branco);
     font-size: 15px;
     padding-top: 5px;
-    
+    background: #FF6870;
 }
 
 .inputIcons {
@@ -120,20 +120,8 @@ ion-checkbox{
 #namoro {
     --background: var(--pp-cinza);
     --background-checked: var(--pp-bg);
-    // width: 5rem;
-    // --handle-width: 48%;
 }
 
-// #namoro::before {
-//     position: absolute;
-  
-//     top: 25%;
-//     left: 10%;
-  
-//     content: "SIM      NÂO";
-  
-//     color: white;
-//     font-size: 15px;
-  
-//     z-index: 1;
-//   }
+#teste {
+    background: #FB4672;
+}

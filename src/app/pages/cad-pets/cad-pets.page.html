@@ -21,11 +21,10 @@
 
     <ion-item color=var(--pp-preto)>
       <ion-label class="label-campos">Tipo</ion-label>
-      <ion-input color=light type="text" [(ngModel)]="pet.tipo"></ion-input>
-      <!-- <ion-select class="label-branco">
-        <ion-select-option value="f">Cachorro</ion-select-option>
-        <ion-select-option value="m">Gato</ion-select-option>
-      </ion-select> -->
+      <ion-select class='label-campos' [(ngModel)]="pet.tipo" id="teste">
+        <ion-select-option value="Cachorro">Cachorro</ion-select-option>
+        <ion-select-option value="Gato">Gato</ion-select-option>
+      </ion-select>
     </ion-item>
 
     <ion-item color=var(--pp-preto)>
@@ -43,11 +42,11 @@
 
     <ion-item color=var(--pp-preto)>
       <ion-label class="label-campos">Sexo</ion-label>
-      <ion-input color=light type="text" [(ngModel)]="pet.sexo"></ion-input>
-      <!-- <ion-select class="label-branco">
-        <ion-select-option value="f">Macho</ion-select-option>
-        <ion-select-option value="m">Fêmea</ion-select-option>
-      </ion-select> -->
+      <!-- <ion-input color=light type="text" [(ngModel)]="pet.sexo"></ion-input> -->
+      <ion-select class="label-branco" [(ngModel)]="pet.sexo">
+        <ion-select-option value="M">Macho</ion-select-option>
+        <ion-select-option value="F">Fêmea</ion-select-option>
+      </ion-select>
     </ion-item>
     <div color=var(--pp-preto)>
       <ion-item color=var(--pp-preto)>
