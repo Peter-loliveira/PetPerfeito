@@ -15,11 +15,17 @@ export class CadPetsPage implements OnInit {
   
   constructor(
     private _petService: PetsService
-    ) {}
+    ) {
+      this.pet.namoro = 'N'
+    }
 
   ngOnInit() {}
 
   cadastrarPet() {
+    if (!this.dataNascimentoPet) {
+      console.log('CampoObrigatorio');
+      return
+    }
     this.pet.nascimento = this.dataNascimentoPet.substring(0, 10);
     console.log(this.pet);
     this._petService.cadastrar(this.pet).subscribe((res) => {
