@@ -10,15 +10,17 @@ import { PetsService } from "src/app/services/PetsService";
 export class CadPetsPage implements OnInit {
   public pet: Pets = new Pets();
   public escolhaNamoro
+  public dataNascimentoPet: string;
   
   
-  constructor(private _petService: PetsService) {
-   
-  }
+  constructor(
+    private _petService: PetsService
+    ) {}
 
   ngOnInit() {}
 
   cadastrarPet() {
+    this.pet.nascimento = this.dataNascimentoPet.substring(0, 10);
     console.log(this.pet);
     this._petService.cadastrar(this.pet).subscribe((res) => {
       console.log(res);

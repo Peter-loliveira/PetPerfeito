@@ -33,9 +33,6 @@ export class UsuarioService implements IUsuarioService {
         if (!usuario.login) throw new Error ('O campo Login é obrigatorio.')
         if (!usuario.senha) throw new Error ('O campo Senha é obrigatorio.')
         if (usuario.senha != usuario.confirmarSenha) throw new Error (' As senhas não coincidem.')
-
-        // Ajuste do formato da data
-        // usuario.nascimento = usuario.nascimento.substring(0,10)
         
         console.log(usuario)
         return this._httpClient.post<Usuario>(this.apiUrl, usuario)

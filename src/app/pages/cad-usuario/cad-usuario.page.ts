@@ -20,8 +20,8 @@ export class CadUsuarioPage implements OnInit {
   ngOnInit() {}
 
   async criarUsuario() {
-    console.log(this.usuario);
     this.usuario.nascimento =  this.dataNascimentoUsuario.substring(0, 10);
+    console.log(this.usuario);
     const Usuario = await this._usuarioService.cadastrar(this.usuario).subscribe((res) => {
       console.log(res);
     });
