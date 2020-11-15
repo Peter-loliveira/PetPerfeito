@@ -11,8 +11,9 @@ export class CadPetsPage implements OnInit {
   public pet: Pets = new Pets();
   public escolhaNamoro
   
+  
   constructor(private _petService: PetsService) {
-    this.pet.namoro = 'N'
+   
   }
 
   ngOnInit() {}
@@ -27,7 +28,7 @@ export class CadPetsPage implements OnInit {
     alert(mensagemAlerta);
   }
 
-  namoro(){
+  ConfiguraNamoro(){
     this.escolhaNamoro = document.getElementById('namoro');
     if (this.escolhaNamoro.checked) {
       this.pet.namoro = 'S'

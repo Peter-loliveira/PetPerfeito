@@ -1,7 +1,7 @@
 export class Pets{
         public id: number = null;
         public nome: string = null;
-        public nascimento:Date = null;
+        public nascimento: String = null;
         public tipo: string = null;
         public raca: string = null;
         public sexo: string = null;
