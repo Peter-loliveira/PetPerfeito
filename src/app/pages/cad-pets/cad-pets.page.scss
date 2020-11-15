@@ -1,6 +1,5 @@
 body {
     background-image: linear-gradient(var(--pp-bg), var(--pp-bg2));    
-    // background-image: linear-gradient(#ff9298, #FB4672);    
     height: 100%;
 }
 
@@ -40,6 +39,8 @@ h1{
     font-size: 15px;
     padding-top: 5px;
     background: #FF6870;
+
+    // width: 60%;
 }
 
 .inputIcons {
@@ -48,57 +49,17 @@ h1{
     padding-bottom: 10px;
 }
 
-.forgetpass {
-    text-align: right;
-    width: 100%;
-}
-
-// .logar {
-//     text-align: center;
-//     margin-top: -50px;
-// }
-
-.footer{
-    text-align: center;
-    margin-top: -40px;  
-}
-
-#bt-logar {
+ion-button {
+    color: black;
+    font-weight: bold;
     --background: var(--pp-bg);
     --border-color: var(--pp-bg2);
     --border-width: 5px;
     width: 80%;
-    // border: 3px solid var(--pp-bordas);
     margin-left: 10%;
     margin-top: .7rem;
 }
 
-.bt-cadastrar {
-    background-color: var(--pp-preto);
-    width: 90%;
-    border: 3px solid var(--pp-bordas);
-}
-
-button {
-    border-radius: 70px;
-    padding: 15px;
-    font-size: 20px;
-    color: var(--pp-branco);
-    font-weight: bolder;
-}
-
-a{
-    text-decoration: none;
-    display: flex;
-    text-align: right;
-    font-size: 12px;
-    color: var(--pp-branco);
-    margin-top: 10px;
-}
-
-.bg-body {
-    background-image: linear-gradient(#FF6870, #FB4672);
-}
 
 img {
     width: 50px;
@@ -122,6 +83,11 @@ ion-checkbox{
     --background-checked: var(--pp-bg);
 }
 
-#teste {
-    background: #FB4672;
+ion-datetime {
+    color: white;
+    font-size: 20px;
+}
+
+ion-label {
+    width: 40%;
 }
