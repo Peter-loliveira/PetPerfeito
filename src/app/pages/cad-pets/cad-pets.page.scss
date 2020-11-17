@@ -38,9 +38,7 @@ h1{
     color: var(--pp-branco);
     font-size: 15px;
     padding-top: 5px;
-    background: #FF6870;
-
-    // width: 60%;
+    // background: #FF6870;
 }
 
 .inputIcons {
@@ -57,12 +55,7 @@ ion-button {
     --border-width: 5px;
     width: 80%;
     margin-left: 10%;
-    margin-top: .7rem;
-}
-
-
-img {
-    width: 50px;
+    margin-top: -1.5rem;
 }
 
 .linksBotoes {
@@ -74,10 +67,6 @@ img {
     margin-bottom: 20px ;
 }
 
-ion-checkbox{
-    margin-right: 15px;
-}
-
 #namoro {
     --background: var(--pp-cinza);
     --background-checked: var(--pp-bg);
@@ -85,9 +74,29 @@ ion-checkbox{
 
 ion-datetime {
     color: white;
-    font-size: 20px;
+    font-size: 1rem;
+    margin-top: .5rem;
 }
 
-ion-label {
-    width: 40%;
+.iputNome {
+    margin-top: .3rem;
+    margin-left: 1rem;
 }
+
+ion-item {    
+    height: 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Selects {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ion-select{
+    margin-top: 1rem;
+}
+
