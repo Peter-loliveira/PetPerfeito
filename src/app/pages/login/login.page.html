@@ -9,21 +9,19 @@
     <ion-row>
       <ion-col>
         <ion-item color=var(--pp-preto)>
-          <ion-label class="label-campos" position="floating">Usuário</ion-label>
+          <img src="../../../assets/svg/user.svg" alt="" class="inputIcons">
+          <ion-label color = light>Usuário</ion-label>
           <ion-input color=light type="text" [(ngModel)]="login.login"></ion-input>
-            <img src="../../../assets/svg/user.svg" alt="" class="inputIcons">
         </ion-item>
         <ion-item color=var(--pp-preto)>
-          <ion-label class="label-campos" position="floating">senha</ion-label>
+          <img src="../../../assets/svg/showpass.svg" alt="" class="inputIcons">
+          <ion-label color = light >senha</ion-label>
           <ion-input color=light type= "password"[(ngModel)]="login.senha">
-            <!-- <a href=""> -->
-              <img src="../../../assets/svg/showpass.svg" alt="" class="inputIcons">
-            <!-- </a> -->
           </ion-input>
         </ion-item>
-        <!-- <a href=""> -->
-          <ion-label class="forgetpass" color=light>Esqueceu sua senha?</ion-label>
-        <!-- </a> -->
+        <a href="">
+          <ion-label color=light class="forgetpass">Esqueceu sua senha?</ion-label>
+        </a>
       </ion-col>
     </ion-row>
   </div>

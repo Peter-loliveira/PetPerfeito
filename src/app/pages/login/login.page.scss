@@ -28,14 +28,8 @@ h1{
     width: 80px;
 }
 
-.label-campos {
-    color: var(--pp-cinza);
-    font-size: 15px;
-    margin-left: 30px;
-    padding-top: 5px;
-}
-
 .inputIcons {
+    width: 40px;
     margin-left: -10px;
     height: 25px;
     padding-bottom: 10px;
@@ -68,13 +62,13 @@ h1{
     border: 3px solid var(--pp-bordas);
 }
 
-button {
-    border-radius: 70px;
-    padding: 15px;
-    font-size: 20px;
-    color: var(--pp-branco);
-    font-weight: bolder;
-}
+// button {
+//     border-radius: 70px;
+//     padding: 15px;
+//     font-size: 20px;
+//     color: var(--pp-branco);
+//     font-weight: bolder;
+// }
 
 a{
     text-decoration: none;
@@ -85,20 +79,9 @@ a{
     margin-top: 10px;
 }
 
-.bg-body {
-    background-image: linear-gradient(#FF6870, #FB4672);
-}
 
 img {
     width: 50px;
 }
 
-.linksBotoes {
-    display: flex;
-    justify-content: center;
-}
 
-.bt-selecionar {
-    background-color: var(--pp-azul);
-    color: var(--pp-preto);
-}
