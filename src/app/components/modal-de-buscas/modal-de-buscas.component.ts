@@ -1,3 +1,4 @@
+import { ModalController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalDeBuscasComponent implements OnInit {
 
-  constructor() { }
+  constructor( private _modalController: ModalController ) { }
 
   ngOnInit() {}
+
+  fecharFiltros() {
+    this._modalController.dismiss()
+  }
 
 }
