@@ -20,7 +20,6 @@ export class UsuarioService implements IUsuarioService {
     }
     
     logout(): void {
-        localStorage.removeItem('usuariologado')
         localStorage.clear();
     }
 

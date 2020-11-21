@@ -1,3 +1,4 @@
+import { Pets } from './../../models/Pets';
 import { IPetsService } from "src/app/interfaces/IPetsService";
 import { Usuario } from "src/models/Usuario";
 import { HttpClient } from "@angular/common/http";
@@ -14,6 +15,7 @@ import { UsuarioService } from "src/app/services/UsuarioService";
 export class PetsService implements IPetsService {
   public apiUrl: string = Global.ApiUrl + "pets";
   private _usuarioLogado: Usuario = new Usuario();
+  private pets: Pets[] = [];
 
   constructor(
     private _usuarioServices: UsuarioService,
@@ -43,8 +45,18 @@ export class PetsService implements IPetsService {
     throw new Error("Method not implemented.");
   }
 
-  listar(): Observable<Pets[]> {
-    throw new Error("Method not implemented.");
+  listar(): Promise<Pets[]> {
+    this.pets = [];
+    const promise = new Promise<Pets[]>(async (resolve, reject) => {
+      try {
+        const usuario = await this._usuarioServices.buscarUsuario().toPromise();
+        this.pets = usuario.pets;
+        resolve(usuario.pets);
+      } catch (e) {
+        reject(e);
+      }
+    });
+    return promise;
   }
 
   buscar(pets_id: number): Observable<Pets> {
