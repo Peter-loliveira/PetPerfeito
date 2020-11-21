@@ -23,8 +23,6 @@ export class PagPrincipalPage implements OnInit {
     this._usuarioLogado = this._usuarioService.retornarUsuarioLogado()
   }
 
-  
-
   ngOnInit() {
   }
 
@@ -40,6 +38,11 @@ export class PagPrincipalPage implements OnInit {
     const listaPets = await this._petsService.listar();
     this.pets = listaPets;
     console.log(this.pets)
+  }
+
+  public sair(){
+    this._route.navigate(['/'])
+    localStorage.clear();
   }
 
 }

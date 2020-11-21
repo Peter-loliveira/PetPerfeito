@@ -1,25 +1,34 @@
-<ion-content>
+<ion-header>
+  <ion-toolbar>
+    <ion-title mode = 'md'>{{_usuarioLogado.nome}}</ion-title>
+    <ion-buttons slot = 'end'>
+      <ion-button (click) = 'sair()' >Sair</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+   
 
-  <ion-grid >
+  <ion-list *ngFor="let pet of pets">
+    <ion-item button>
+      <ion-row>
+        <ion-col>
+          <ion-img> </ion-img>
+        </ion-col>
+        <ion-col>
+          <ion-label>Nome: {{pet.nome}}</ion-label>
+          <ion-label>Tipo: {{pet.tipo}}</ion-label>
+          <ion-label>Raça: {{pet.raca}}</ion-label>
+          <ion-label>Sexo: {{pet.sexo}}</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-list>
 
-    <h1>{{ _usuarioLogado.nome }}</h1>
-    <ion-row *ngIf = 'pets.length > 0'>
-
-      <ion-col>
-          Lista de PETs cadastrados
-      </ion-col>
-
-    </ion-row>
-    
-    <ion-row *ngIf = 'pets.length == 0'>
-
-      <ion-col>
-          <h3>Você ainda não possui nenhum PET cadastrado</h3>
-          <ion-button (click) = 'cadastrarPrimeiroPet()'>Cadastre seu primeiro</ion-button>
-      </ion-col>
-
-    </ion-row>
-
-  </ion-grid>
-
-</ion-content>
+  <ion-row *ngIf="pets.length == 0">
+    <ion-col>
+      <h3>Você ainda não possui nenhum PET cadastrado</h3>
+      <ion-button (click)="cadastrarPrimeiroPet()"
+        >Cadastre seu primeiro</ion-button
+      >
+    </ion-col>
+  </ion-row>

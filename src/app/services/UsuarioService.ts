@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { IUsuarioService } from 'src/app/interfaces/IUsuarioService';
 import { Usuario } from 'src/models/Usuario';
 import{HttpClient} from '@angular/common/http';
@@ -11,6 +12,7 @@ import { Global } from 'src/theme/shared/Global';
 export class UsuarioService implements IUsuarioService {
      
     public apiUrl: string = Global.ApiUrl + "usuarios";
+    private _router: Router;
     
     constructor( private _httpClient: HttpClient ) {}
 
@@ -19,9 +21,6 @@ export class UsuarioService implements IUsuarioService {
         return this._httpClient.get<Usuario>(`${this.apiUrl}/${usuario.id}`);
     }
     
-    logout(): void {
-        localStorage.clear();
-    }
 
     cadastrar(usuario: Usuario): Observable<Usuario> {
         if (!usuario.nome) throw new Error ('O campo Nome é obrigatorio.')
