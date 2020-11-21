@@ -1,15 +1,15 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title mode = 'md'>{{_usuarioLogado.nome}}</ion-title>
-    <ion-buttons slot = 'end'>
-      <ion-button (click) = 'sair()' >Sair</ion-button>
+    <ion-title mode="md">{{_usuarioLogado.nome}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="sair()">Sair</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-   
 
-  <ion-list *ngFor="let pet of pets">
-    <ion-item button>
+<ion-content>
+  <ion-list>
+    <ion-item button *ngFor="let pet of pets">
       <ion-row>
         <ion-col>
           <ion-img> </ion-img>
@@ -32,3 +32,4 @@
       >
     </ion-col>
   </ion-row>
+</ion-content>
