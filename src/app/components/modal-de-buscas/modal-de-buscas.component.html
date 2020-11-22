@@ -1,0 +1,69 @@
+<ion-header mode = 'ios'>
+  <ion-toolbar>
+    <ion-title>Filtrar</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="fecharFiltros()">Cancelar</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>Filtrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row id="margem-top"></ion-row>
+  <ion-row>
+    <ion-col>Tipo</ion-col>
+    <ion-col>
+      <ion-select>
+        <ion-select-option value="M">Cachorro</ion-select-option>
+        <ion-select-option value="F">Gato</ion-select-option>
+      </ion-select>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>Sexo</ion-col>
+    <ion-col>
+      <ion-select>
+        <ion-select-option value="M">Macho</ion-select-option>
+        <ion-select-option value="F">Fêmea</ion-select-option>
+      </ion-select>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>Raça</ion-col>
+    <ion-col>
+      <ion-select>
+        <ion-select-option value="Raça 1">Raça 1</ion-select-option>
+        <ion-select-option value="Raça 2">Raça 2</ion-select-option>
+        <ion-select-option value="Raça 3">Pastor Alemão</ion-select-option>
+        <ion-select-option value="Raça 4">Raça 4</ion-select-option>
+        <ion-select-option value=">Raça 5">Raça 5</ion-select-option>
+        <ion-select-option value="Raça 6">Raça 6</ion-select-option>
+      </ion-select>
+    </ion-col>
+  </ion-row>
+
+  <ion-row id="idades">
+    <div id="idade1">Idade</div>
+    <div id="idade2">
+      <ion-range
+        min="2"
+        max="20"
+        step="1"
+        snaps
+        pin
+        color="secondary"
+        mode = 'md'
+      >
+      </ion-range>
+    </div>
+
+  </ion-row>
+</ion-content>
+
+<ion-footer>
+  <ion-button>Filtrar</ion-button>
+</ion-footer>

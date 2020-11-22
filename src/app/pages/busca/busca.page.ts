@@ -1,4 +1,6 @@
+import { ModalDeBuscasComponent } from './../../components/modal-de-buscas/modal-de-buscas.component';
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-busca',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuscaPage implements OnInit {
 
-  constructor() { }
+  constructor( private _modalController: ModalController ) { }
 
   ngOnInit() {
   }
+
+async exibeFiltros() {
+  
+  const filtros = await this._modalController.create({
+    component: ModalDeBuscasComponent
+  });
+
+  await filtros.present();
+
+}
 
 }
