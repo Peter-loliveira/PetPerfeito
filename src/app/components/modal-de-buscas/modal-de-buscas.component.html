@@ -2,10 +2,9 @@
   <ion-toolbar>
     <ion-title>Filtrar</ion-title>
     <ion-buttons slot="start">
-      <ion-button (click)="fecharFiltros()">Cancelar</ion-button>
-    </ion-buttons>
-    <ion-buttons slot="end">
-      <ion-button>Filtrar</ion-button>
+      <ion-button (click)="fecharFiltros()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -64,6 +63,3 @@
   </ion-row>
 </ion-content>
 
-<ion-footer>
-  <ion-button>Filtrar</ion-button>
-</ion-footer>
