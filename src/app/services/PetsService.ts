@@ -1,4 +1,3 @@
-import { Pets } from './../../models/Pets';
 import { IPetsService } from "src/app/interfaces/IPetsService";
 import { Usuario } from "src/models/Usuario";
 import { HttpClient } from "@angular/common/http";
