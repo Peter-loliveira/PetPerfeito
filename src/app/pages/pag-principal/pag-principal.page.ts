@@ -26,6 +26,11 @@ export class PagPrincipalPage implements OnInit {
   ngOnInit() {
   }
 
+  ngOnDestroy(): void {
+    console.log('A página limpou a lista d Carros!');
+    this.pets = [];
+  }
+
   ionViewDidEnter() {
     this.obterListaPets();
   }

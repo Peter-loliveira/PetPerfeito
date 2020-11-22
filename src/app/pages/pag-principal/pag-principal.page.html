@@ -1,35 +1,45 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title mode="md">{{_usuarioLogado.nome}}</ion-title>
-    <ion-buttons slot="end">
-      <ion-button (click)="sair()">Sair</ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<body>
+  <div class="campos-Cad">
+    <div class="superior">
+      <h1>{{_usuarioLogado.nome}}</h1>
+      <img src="../../../assets/svg/logo.svg" alt="" class="logo" />
+    </div>
+    <ion-row>
+      <ion-col>
+        <ion-toolbar>
+          <ion-label class="ion-label-toolbar" color="light"
+            >Sua lista de Pets</ion-label>
+          <ion-buttons  slot="end">
+            <ion-button id="bt-sair" (click)="sair()">Sair</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-col>
+    </ion-row>
 
-<ion-content>
-  <ion-list>
-    <ion-item button *ngFor="let pet of pets">
-      <ion-row>
-        <ion-col>
-          <ion-img> </ion-img>
-        </ion-col>
-        <ion-col>
-          <ion-label>Nome: {{pet.nome}}</ion-label>
-          <ion-label>Tipo: {{pet.tipo}}</ion-label>
-          <ion-label>Raça: {{pet.raca}}</ion-label>
-          <ion-label>Sexo: {{pet.sexo}}</ion-label>
-        </ion-col>
-      </ion-row>
-    </ion-item>
-  </ion-list>
-
-  <ion-row *ngIf="pets.length == 0">
-    <ion-col>
-      <h3>Você ainda não possui nenhum PET cadastrado</h3>
-      <ion-button (click)="cadastrarPrimeiroPet()"
-        >Cadastre seu primeiro</ion-button
-      >
-    </ion-col>
-  </ion-row>
-</ion-content>
+    <ion-content>
+      <ion-list>
+        <ion-item detail="true" button  *ngFor="let pet of pets">
+          <ion-row>
+            <ion-col class="largura-coluna1">
+              <img class="photoPet" src="../../../assets/photos/c/01.png" />
+            </ion-col>
+            <ion-col class="largura-coluna2">
+              <ion-label>{{ pet.nome }}</ion-label>
+              <ion-label>{{ pet.raca }}</ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-item>
+        <ion-row *ngIf="pets.length == 0">
+          <ion-col>
+            <ion-label color="light"
+              >Você ainda não possui nenhum PET cadastrado!</ion-label
+            >
+            <ion-button (click)="cadastrarPrimeiroPet()"
+              >Cadastre o primeiro</ion-button
+            >
+          </ion-col>
+        </ion-row>
+      </ion-list>
+    </ion-content>
+  </div>
+</body>

@@ -1,4 +1,84 @@
+body {
+  background-image: linear-gradient(var(--pp-bg), var(--pp-bg2));
+  background-image: linear-gradient(var(--pp-bg), var(--pp-bg2));
+  height: 100%;
+}
+
+.campos-Cad {
+  background-color: var(--pp-preto);
+  border-radius: 40px;
+  margin: 0 10px;
+  height: 90%;
+  margin-top: 30px;
+}
+
+.superior {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+ion-toolbar {
+  margin-top: -1.5rem;
+  height: 2.5rem;
+  padding: 0;
+}
+
+h1 {
+  color: var(--pp-branco);
+  border-bottom: 5px solid var(--pp-azul);
+  border-radius: 5px;
+  padding-top: 15px;
+}
+
+.logo {
+  width: 80px;
+}
+
+
+img {
+  width: 50px;
+}
+
+.photoPet {
+  border: 3px solid var(--pp-bg2);
+  border-radius: 50%;
+  width: 3rem;
+}
+
+.largura-coluna1 {
+  width: 10%;
+}
+
+ion-toolbar {
+  --background: var(--pp-preto);
+}
+
+ion-content{
+  height: 60%;
+  --background: var(--pp-preto);
+}
+
+ion-list{
+  background: var(--pp-preto);
+}
+
+#bt-sair {
+  color: white;
+}
+
+ion-item {
+  --border-radius: 10px;
+  margin: 5px 10px;
+  --background: var(--pp-bordas);
+}
+
 ion-content {
-  --background: linear-gradient(var(--pp-bg), var(--pp-bg2));
+  // overwrite inline styles
+  --offset-bottom: auto!important;
+  --overflow: hidden;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
   }
-  
+}
