@@ -20,12 +20,16 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
+  ionViewDidEnter()  {
+  }
+
   fazerLogin(){
     console.log(this.login)
     this._loginService.login(this.login).subscribe((res) => {
       this._usuarioService.logar(res);
       this._route.navigate(['/tabs']);
       console.log(res);
+      this.limparCampos()
     });
   }
 
@@ -33,8 +37,11 @@ export class LoginPage implements OnInit {
     this._route.navigate(['/cad-usuario']);
   }
 
-}
+  limparCampos(){
+    this.login.login = '';
+    this.login.senha = '';
+  }
 
-  
+}
 
 
