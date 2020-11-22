@@ -7,7 +7,7 @@
     <ion-row>
       <ion-col>
         <ion-toolbar>
-          <ion-label class="ion-label-toolbar" color="light"
+          <ion-label color="light"
             >Sua lista de Pets</ion-label
           >
           <ion-buttons slot="end">
@@ -32,14 +32,13 @@
         </ion-item>
       </ion-list>
 
-      <!-- <ion-toolbar *ngIf="pets.length == 0" id="Lista-vazia">
-            <ion-buttons slot="end">
-            </ion-buttons>
-          </ion-toolbar> -->
       <div *ngIf="pets.length == 0" id="Lista-vazia">
+
         <ion-label color="light">Primeiro Cadastro!</ion-label>
+
         <ion-icon color = light name="arrow-forward-outline"></ion-icon>
-        <ion-fab-button (click)="cadastrarPrimeiroPet()">
+
+        <ion-fab-button (click)="cadastrarPrimeiroPet()">          
           <ion-icon name="add-outline"></ion-icon>
         </ion-fab-button>
       </div>
