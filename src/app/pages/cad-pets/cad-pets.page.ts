@@ -19,7 +19,13 @@ export class CadPetsPage implements OnInit {
       this.pet.namoro = 'N'
     }
 
-  ngOnInit() {}
+  ngOnInit() {
+    
+  }
+
+  ionViewDidEnter()  {
+    this.limparCampos();
+  }
 
   cadastrarPet() {
     if (!this.dataNascimentoPet) {
@@ -33,6 +39,7 @@ export class CadPetsPage implements OnInit {
     });
 
     let mensagemAlerta: string = "Cadastro realizado com sucesso.";
+    this.limparCampos();
     alert(mensagemAlerta);
   }
 
@@ -41,5 +48,13 @@ export class CadPetsPage implements OnInit {
     if (this.escolhaNamoro.checked) {
       this.pet.namoro = 'S'
     } else {this.pet.namoro = 'N'}
+  }
+
+  limparCampos(){
+    this.pet.nome = '';
+    this.dataNascimentoPet = '';
+    this.pet.tipo = '';
+    this.pet.raca = '';
+    this.pet.sexo = '';
   }
 }
