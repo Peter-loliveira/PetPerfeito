@@ -8,22 +8,17 @@ import { AlertController } from '@ionic/angular';
 export class ErrosGlobais implements ErrorHandler {
 
     constructor(private _alert: AlertController) {
-
     }
 
     handleError(error: any): void {
-
         console.log(error);
-
         if (error instanceof Error) {
             let er: Error = error;
             this.mostrarErro(er.message);
         }
-
         if (error instanceof HttpErrorResponse) {
             let er: HttpErrorResponse = error;
             let msg;
-
             switch (er.status) {
                 case 404:
                     msg = 'Endereço não encontrado.';
@@ -33,7 +28,6 @@ export class ErrosGlobais implements ErrorHandler {
                     break;
                 default:
                     msg = er.error;
-
             }
             this.mostrarErro(msg)
         }
