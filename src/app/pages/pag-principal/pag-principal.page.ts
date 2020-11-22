@@ -27,7 +27,7 @@ export class PagPrincipalPage implements OnInit {
   }
 
   ngOnDestroy(): void {
-    console.log('A página limpou a lista d Carros!');
+    console.log('A página limpou a lista de PETS!');
     this.pets = [];
   }
 
