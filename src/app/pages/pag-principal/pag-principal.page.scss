@@ -79,3 +79,20 @@ ion-content {
     display: none;
   }
 }
+
+#Lista-vazia {
+  --background: var(--pp-preto);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 .5rem;
+}
+
+
+ion-fab-button {
+  width : 2rem;
+  height: 2rem;
+  margin-right: .5rem;
+  margin-left: 3rem;
+
+}

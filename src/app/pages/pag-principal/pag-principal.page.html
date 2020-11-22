@@ -8,8 +8,9 @@
       <ion-col>
         <ion-toolbar>
           <ion-label class="ion-label-toolbar" color="light"
-            >Sua lista de Pets</ion-label>
-          <ion-buttons  slot="end">
+            >Sua lista de Pets</ion-label
+          >
+          <ion-buttons slot="end">
             <ion-button id="bt-sair" (click)="sair()">Sair</ion-button>
           </ion-buttons>
         </ion-toolbar>
@@ -18,7 +19,7 @@
 
     <ion-content>
       <ion-list>
-        <ion-item detail="true" button  *ngFor="let pet of pets">
+        <ion-item detail="true" button *ngFor="let pet of pets">
           <ion-row>
             <ion-col>
               <img class="photoPet" src="../../../assets/photos/c/01.png" />
@@ -29,17 +30,19 @@
             </ion-col>
           </ion-row>
         </ion-item>
-        <ion-row *ngIf="pets.length == 0">
-          <ion-col>
-            <ion-label color="light"
-              >Você ainda não possui nenhum PET cadastrado!</ion-label
-            >
-            <ion-button (click)="cadastrarPrimeiroPet()"
-              >Cadastre o primeiro</ion-button
-            >
-          </ion-col>
-        </ion-row>
       </ion-list>
+
+      <!-- <ion-toolbar *ngIf="pets.length == 0" id="Lista-vazia">
+            <ion-buttons slot="end">
+            </ion-buttons>
+          </ion-toolbar> -->
+      <div *ngIf="pets.length == 0" id="Lista-vazia">
+        <ion-label color="light">Primeiro Cadastro!</ion-label>
+        <ion-icon color = light name="arrow-forward-outline"></ion-icon>
+        <ion-fab-button (click)="cadastrarPrimeiroPet()">
+          <ion-icon name="add-outline"></ion-icon>
+        </ion-fab-button>
+      </div>
     </ion-content>
   </div>
 </body>
