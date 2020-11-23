@@ -46,7 +46,7 @@ export class UsuarioService implements IUsuarioService {
     }
 
     retornarUsuarioLogado(): Usuario {
-        let usuario:Usuario = JSON.parse(localStorage.getItem('usuarioLogado'));
+        let usuario:Usuario = JSON.parse(localStorage.getItem('usuarioLogado')); 
         return usuario;
     }
 
