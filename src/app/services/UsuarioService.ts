@@ -10,7 +10,7 @@ import { Global } from 'src/theme/shared/Global';
     'providedIn': 'root'
 })
 export class UsuarioService implements IUsuarioService {
-     
+
     public apiUrl: string = Global.ApiUrl + "usuarios";
     private _router: Router;
     
@@ -46,7 +46,8 @@ export class UsuarioService implements IUsuarioService {
     }
 
     retornarUsuarioLogado(): Usuario {
-        let usuario:Usuario = JSON.parse(localStorage.getItem('usuarioLogado')); 
+        let usuario:Usuario = JSON.parse(localStorage.getItem('usuarioLogado'));
+        localStorage.getItem('usuarioLogado');
         return usuario;
     }
 

@@ -20,20 +20,25 @@ export class PetsService implements IPetsService {
     private _usuarioServices: UsuarioService,
     private _http: HttpClient
   ) {
-    this._usuarioLogado = this._usuarioServices.retornarUsuarioLogado();
+    
   }
-
+  
+  ionViewDidEnter()  {
+  }
+  
   cadastrar(pets: Pets): Observable<Pets> {
+    this._usuarioLogado = this._usuarioServices.retornarUsuarioLogado();
+
     if (!pets.nome) throw new Error("O campo Nome é obrigatorio.");
     if (!pets.nascimento) throw new Error("O campo Data de nascimento é obrigatorio.");
     if (!pets.tipo) throw new Error("O campo Tipo é obrigatorio.");
     if (!pets.raca) throw new Error("O campo Raca é obrigatorio.");
     if (!pets.sexo) throw new Error("O campo Sexo é obrigatorio.");
     pets.usuario_id = this._usuarioLogado.id;
-
+    
     console.log(pets);
-
-    return this._http.post<Pets>(this.apiUrl, pets);
+    
+    return this._http.post<Pets>(this.apiUrl, pets);    
   }
 
   remover(Pets_id: number): void {

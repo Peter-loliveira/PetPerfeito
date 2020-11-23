@@ -14,7 +14,7 @@ export class CadPetsPage implements OnInit {
   
   
   constructor(
-    private _petService: PetsService
+    private _petService: PetsService,
     ) {
       this.pet.namoro = 'N'
     }
@@ -24,7 +24,6 @@ export class CadPetsPage implements OnInit {
   }
 
   ionViewDidEnter()  {
-    this.limparCampos();
   }
 
   cadastrarPet() {
@@ -33,13 +32,11 @@ export class CadPetsPage implements OnInit {
       return
     }
     this.pet.nascimento = this.dataNascimentoPet.substring(0, 10);
-    console.log(this.pet);
     this._petService.cadastrar(this.pet).subscribe((res) => {
       console.log(res);
     });
 
     let mensagemAlerta: string = "Cadastro realizado com sucesso.";
-    this.limparCampos();
     alert(mensagemAlerta);
   }
 
@@ -50,11 +47,4 @@ export class CadPetsPage implements OnInit {
     } else {this.pet.namoro = 'N'}
   }
 
-  limparCampos(){
-    this.pet.nome = '';
-    this.dataNascimentoPet = '';
-    this.pet.tipo = '';
-    this.pet.raca = '';
-    this.pet.sexo = '';
-  }
 }
