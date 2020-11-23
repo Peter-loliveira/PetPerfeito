@@ -18,7 +18,11 @@ export class PagPrincipalPage implements OnInit {
     private _usuarioService: UsuarioService,
     private _route: Router,
     private _petsService: PetsService
-  ) {}
+  ) {
+    
+    this._usuarioLogado = this._usuarioService.retornarUsuarioLogado();
+
+  }
 
   ngOnInit() {}
 
@@ -28,7 +32,7 @@ export class PagPrincipalPage implements OnInit {
   }
 
   ionViewDidEnter() {
-    this._usuarioLogado = this._usuarioService.retornarUsuarioLogado();
+    console.log('Contructor chamado - tela principal');
     this.obterListaPets();
   }
 
