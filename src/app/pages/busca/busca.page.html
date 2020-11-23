@@ -8,15 +8,15 @@
       <ion-col>
         <ion-toolbar id="barra-botao-filtro" color = black>
           <ion-buttons slot="end"> 
-            <!-- <ion-label color = light>Filtrar</ion-label> -->
             <ion-icon color=primary id="botao-filtro" color = light (click) = 'exibeFiltros()' name="filter-circle"></ion-icon>
           </ion-buttons>
         </ion-toolbar>
 
         <ion-slides>
-          <ion-slide>
+
+          <ion-slide *ngFor = 'let pet of pets'>
             <div class="slide">
-              <h2 class="nomePet">Cachorro 01</h2>
+              <h2 class="nomePet">{{pet.nome}}</h2>
               <img class="photoPet" src="../../../assets/photos/c/01.png" />
               <p class="DescPet">
                 Mussum Ipsum, cacilds vidis litro abertis. Casamentiss faiz
@@ -25,51 +25,11 @@
             </div>
           </ion-slide>
 
-          <ion-slide>
-            <div class="slide">
-              <h2 class="nomePet">Cachorro 02</h2>
-              <img class="photoPet" src="../../../assets/photos/c/02.png" />
-              <p class="DescPet">
-                Mussum Ipsum, cacilds vidis litro abertis. Casamentiss faiz
-                malandris se pirulitá.
-              </p>
-            </div>
-          </ion-slide>
-
-          <ion-slide>
-            <div class="slide">
-              <h2 class="nomePet">Cachorro 03</h2>
-              <img class="photoPet" src="../../../assets/photos/c/03.png" />
-              <p class="DescPet">
-                Mussum Ipsum, cacilds vidis litro abertis. Casamentiss faiz
-                malandris se pirulitá.
-              </p>
-            </div>
-          </ion-slide>
-
-          <ion-slide>
-            <div class="slide">
-              <h2 class="nomePet">Cachorro 04</h2>
-              <img class="photoPet" src="../../../assets/photos/c/04.png" />
-              <p class="DescPet">
-                Mussum Ipsum, cacilds vidis litro abertis. Casamentiss faiz
-                malandris se pirulitá.
-              </p>
-            </div>
-          </ion-slide>
-
-          <ion-slide>
-            <div class="">
-              <h2 class="nomePet">FOFUXO</h2>
-              <img class="photoPet" src="../../../assets/photos/c/FOFUXO.png" />
-              <p class="DescPet">
-                Fofuxo é um cão que foi resgatado. Antes ele estava em um estado
-                deplorável.
-              </p>
-            </div>
-          </ion-slide>
         </ion-slides>
       </ion-col>
     </ion-row>
   </div>
+        <ion-fab-button id="bt-busca" (click)="obterListaPets()">
+          <img id="img-Busca" src="../../../assets/svg/busca.svg" alt="">
+        </ion-fab-button>
 </body>
