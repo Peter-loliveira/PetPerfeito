@@ -3,9 +3,6 @@ import { Component, OnInit } from "@angular/core";
 import { ModalController } from "@ionic/angular";
 import { Pets } from "src/models/Pets";
 import { PetsService } from "src/app/services/PetsService";
-import { Usuario } from "src/models/Usuario";
-import { UsuarioService } from "src/app/services/UsuarioService";
-import { PagPrincipalPage } from "../pag-principal/pag-principal.page";
 
 @Component({
   selector: "app-busca",
