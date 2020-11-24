@@ -1,39 +1,60 @@
 <ion-content>
-
   <div class="campos-login">
     <div class="superior">
       <h1>Login</h1>
-      <img src="../../../assets/svg/logo.svg" alt="" class="logo">
+      <img src="../../../assets/svg/logo.svg" alt="" class="logo" />
     </div>
 
     <ion-row>
       <ion-col>
-        <ion-item color=var(--pp-preto)>
-          <img src="../../../assets/svg/user.svg" alt="" class="inputIcons">
-          <ion-label color = light>Usuário</ion-label>
-          <ion-input color=light type="text" [(ngModel)]="login.login"></ion-input>
+        <ion-item color="var(--pp-preto)">
+          <img src="../../../assets/svg/user.svg" alt="" class="inputIcons" />
+          <ion-label color="light">Usuário</ion-label>
+          <ion-input
+            color="light"
+            type="text"
+            [(ngModel)]="login.login"
+          ></ion-input>
         </ion-item>
-        <ion-item color=var(--pp-preto)>
-          <img src="../../../assets/svg/showpass.svg" alt="" class="inputIcons">
-          <ion-label color = light >senha</ion-label>
-          <ion-input color=light type= "password"[(ngModel)]="login.senha">
+        <ion-item color="var(--pp-preto)">
+          <img
+            src="../../../assets/svg/showpass.svg"
+            alt=""
+            class="inputIcons"
+          />
+          <ion-label color="light">senha</ion-label>
+          <ion-input color="light" type="password" [(ngModel)]="login.senha">
           </ion-input>
         </ion-item>
+
+        <!-- <ion-toolbar>
+          <ion-buttons slot="end">
+            <ion-button>Esqueceu sua senha?</ion-button>
+          </ion-buttons> -->
+        <!-- </ion-toolbar> -->
+
         <a href="">
           <ion-label color=light class="forgetpass">Esqueceu sua senha?</ion-label>
         </a>
       </ion-col>
     </ion-row>
   </div>
-  
+
   <div class="logar">
-    <ion-button size="large" fill='solid' shape="round" class="bt-logar" (click)="fazerLogin();">Entrar</ion-button>
+    <ion-button
+      size="large"
+      fill="solid"
+      shape="round"
+      class="bt-logar"
+      (click)="fazerLogin();"
+      >Entrar</ion-button
+    >
     <!-- <ion-button size="large" fill='solid' shape="round" class="bt-logar" [routerLink]="['/tabs']">Entrar</ion-button> -->
   </div>
 
   <div class="footer">
-    <ion-button  [routerLink]="['/cad-usuario']" fill='solid' shape="round">Cadastrar-se</ion-button>
+    <ion-button [routerLink]="['/cad-usuario']" fill="solid" shape="round"
+      >Cadastrar-se</ion-button
+    >
   </div>
-
-
 </ion-content>
