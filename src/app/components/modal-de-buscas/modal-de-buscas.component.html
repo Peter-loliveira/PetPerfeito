@@ -1,6 +1,6 @@
-<ion-header mode = 'ios'>
+<ion-header mode="ios">
   <ion-toolbar>
-    <ion-title>{{name}}</ion-title>
+    <ion-title>Filtrar</ion-title>
     <ion-buttons slot="start">
       <ion-button (click)="dismissModal()">
         <ion-icon name="chevron-back-outline"></ion-icon>
@@ -10,44 +10,13 @@
 </ion-header>
 
 <ion-content>
-
-<ion-item>
-    <ion-label position="floating">Amount</ion-label>
-    <ion-input [formControl] = 'balanceInput' type="number" ></ion-input>
-</ion-item>
-
-<ion-button [disabled] = 'balanceInput.invalid' (click)="depositar()">Depositar</ion-button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- <ion-row id="margem-top"></ion-row>
+  <ion-row id="margem-top"></ion-row>
   <ion-row>
     <ion-col>Tipo</ion-col>
     <ion-col>
-      <ion-select>
-        <ion-select-option value="M">Cachorro</ion-select-option>
-        <ion-select-option value="F">Gato</ion-select-option>
-      </ion-select>
-    </ion-col>
-  </ion-row>
-
-  <ion-row>
-    <ion-col>Sexo</ion-col>
-    <ion-col>
-      <ion-select>
-        <ion-select-option value="M">Macho</ion-select-option>
-        <ion-select-option value="F">Fêmea</ion-select-option>
+      <ion-select [formControl]="tipoInput">
+        <ion-select-option value="Cachorro">Cachorro</ion-select-option>
+        <ion-select-option value="Gato">Gato</ion-select-option>
       </ion-select>
     </ion-col>
   </ion-row>
@@ -55,7 +24,7 @@
   <ion-row>
     <ion-col>Raça</ion-col>
     <ion-col>
-      <ion-select>
+      <ion-select [formControl]="racaInput">
         <ion-select-option value="Raça 1">Raça 1</ion-select-option>
         <ion-select-option value="Raça 2">Raça 2</ion-select-option>
         <ion-select-option value="Raça 3">Pastor Alemão</ion-select-option>
@@ -66,21 +35,30 @@
     </ion-col>
   </ion-row>
 
+  <ion-row>
+    <ion-col>Sexo</ion-col>
+    <ion-col>
+      <ion-select [formControl]="sexoInput">
+        <ion-select-option value="M">Macho</ion-select-option>
+        <ion-select-option value="F">Fêmea</ion-select-option>
+      </ion-select>
+    </ion-col>
+  </ion-row>
+
   <ion-row id="idades">
     <div id="idade1">Idade</div>
     <div id="idade2">
       <ion-range
+        [formControl]="idadeInput"
         min="2"
         max="20"
         step="1"
         snaps
         pin
         color="secondary"
-        mode = 'md'
+        mode="md"
       >
       </ion-range>
     </div>
-
-  </ion-row> -->
+  </ion-row>
 </ion-content>
-

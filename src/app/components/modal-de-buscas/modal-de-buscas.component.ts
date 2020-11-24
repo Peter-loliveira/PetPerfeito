@@ -11,8 +11,16 @@ export class ModalDeBuscasComponent implements OnInit {
 
   @Input() name: String;
   @Input() balance: number;
+  @Input() tipo: String;
+  @Input() raca: String;
+  @Input() sexo: String;
+  @Input() idade: number;
 
-  balanceInput = new FormControl(22, Validators.required)
+  balanceInput = new FormControl;
+  tipoInput = new FormControl;
+  racaInput = new FormControl;
+  sexoInput = new FormControl;
+  idadeInput = new FormControl;
 
   constructor( private modal: ModalController ) { }
 
@@ -23,15 +31,16 @@ export class ModalDeBuscasComponent implements OnInit {
   }
   
   dismissModal(){
-    this.modal.dismiss(null, 'Cancelado')
-  }
-
-  depositar(){
+    const filtros = [
+      {
+        tipo: this.tipoInput.value,
+        raca: this.racaInput.value,
+        sexo: this.sexoInput.value,
+        idade: this.idadeInput.value
+      }
+    ]
     const newBalance = this.balance + this.balanceInput.value;
-
-    this.modal.dismiss(newBalance, 'Depositado')
-    
-     
+    this.modal.dismiss(filtros, 'Depositado')
   }
 
 }
