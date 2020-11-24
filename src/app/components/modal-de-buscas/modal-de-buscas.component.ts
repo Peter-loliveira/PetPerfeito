@@ -1,5 +1,6 @@
+import { FormControl, Validators } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-modal-de-buscas',
@@ -8,12 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalDeBuscasComponent implements OnInit {
 
-  constructor( private _modalController: ModalController ) { }
+  @Input() name: String;
+  @Input() balance: number;
+
+  balanceInput = new FormControl(22, Validators.required)
+
+  constructor( private modal: ModalController ) { }
 
   ngOnInit() {}
 
   fecharFiltros() {
-    this._modalController.dismiss()
+    this.modal.dismiss()
+  }
+  
+  dismissModal(){
+    this.modal.dismiss(null, 'Cancelado')
+  }
+
+  depositar(){
+    const newBalance = this.balance + this.balanceInput.value;
+
+    this.modal.dismiss(newBalance, 'Depositado')
+    
+     
   }
 
 }

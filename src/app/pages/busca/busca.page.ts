@@ -10,6 +10,19 @@ import { PetsService } from "src/app/services/PetsService";
   styleUrls: ["./busca.page.scss"],
 })
 export class BuscaPage implements OnInit {
+
+  accounts = [
+    {
+      name: 'Peter Lange',
+      balance: 1000
+    },
+    {
+      name: 'Carla Fabiana',
+      balance: 1500
+    }
+  ]
+
+
   public pets: Pets[] = new Array<Pets>();
 
   constructor(
@@ -20,20 +33,51 @@ export class BuscaPage implements OnInit {
   ngOnInit() {}
   
   ngOnDestroy(): void {
-    console.log('A página limpou a lista de PETS!');
     this.pets = [];
+    console.log('A página limpou a lista de PETS!');
   }
 
-  async exibeFiltros() {
-    const filtros = await this._modalController.create({
+  async  openModal(account){
+    const modal = await this._modalController.create({
       component: ModalDeBuscasComponent,
+      componentProps: {name: account.name, balance: account.balance}
     });
-    await filtros.present();
+    
+    await modal.present();
+
+    const {data: newbalance, role} = await modal.onWillDismiss();
+
+
+    if (role === 'Depositado') {
+      const index = this.accounts.findIndex(acc => acc.name === account.name);
+      this.accounts[index].balance = newbalance;
+    }
+    
   }
 
-  async obterListaPets() {
-    const listaPets = await this._petsService.listar();
-    this.pets = listaPets;
-    console.log(this.pets);
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // async exibeFiltros() {
+  //   const filtros = await this._modalController.create({
+  //     component: ModalDeBuscasComponent,
+  //   });
+  //   await filtros.present();
+  // }
+
+  // async obterListaPets() {
+  //   const listaPets = await this._petsService.listar();
+  //   this.pets = listaPets;
+  //   console.log(this.pets);
+  // }
 }
