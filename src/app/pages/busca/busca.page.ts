@@ -2,6 +2,7 @@ import { ModalDeBuscasComponent } from "./../../components/modal-de-buscas/modal
 import { Component, OnInit } from "@angular/core";
 import { ModalController } from "@ionic/angular";
 import { Pets } from "src/models/Pets";
+import { PetsService } from 'src/app/services/PetsService';
 
 @Component({
   selector: "app-busca",
@@ -9,6 +10,8 @@ import { Pets } from "src/models/Pets";
   styleUrls: ["./busca.page.scss"],
 })
 export class BuscaPage implements OnInit {
+
+
 
   filtros = [
     {
@@ -25,6 +28,7 @@ export class BuscaPage implements OnInit {
   public pets: Pets[] = new Array<Pets>();
 
   constructor(
+    private _petsService: PetsService,
     private _modalController: ModalController,
   ) {}
 
@@ -50,5 +54,11 @@ export class BuscaPage implements OnInit {
       console.log(this.filtros[0].sexo);
       console.log(this.filtros[0].idade);
     }
+  }
+
+  async obterListaPets() {
+    const listaPets = await this._petsService.listar();
+    this.pets = listaPets;
+    console.log(this.pets);
   }
 }
