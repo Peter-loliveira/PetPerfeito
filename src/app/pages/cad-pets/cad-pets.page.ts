@@ -1,6 +1,7 @@
 import { Pets } from "src/models/Pets";
 import { Component, OnInit } from "@angular/core";
 import { PetsService } from "src/app/services/PetsService";
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: "app-cad-pets",
@@ -14,6 +15,7 @@ export class CadPetsPage implements OnInit {
   
   
   constructor(
+    private _alerta: AlertController,
     private _petService: PetsService,
     ) {
       this.pet.namoro = 'N'
@@ -26,7 +28,7 @@ export class CadPetsPage implements OnInit {
   ionViewDidEnter()  {
   }
 
-  cadastrarPet() {
+  async cadastrarPet() {
     if (!this.dataNascimentoPet) {
       console.log('CampoObrigatorio');
       return
@@ -37,7 +39,9 @@ export class CadPetsPage implements OnInit {
     });
 
     let mensagemAlerta: string = "Cadastro realizado com sucesso.";
-    alert(mensagemAlerta);
+    const alerta = await this._alerta.create({header: 'Sucesso',message: mensagemAlerta, buttons:['OK']
+    });
+    await alerta.present()
   }
 
   ConfiguraNamoro(){

@@ -1,3 +1,4 @@
+import { AlertController } from '@ionic/angular';
 import { Router } from "@angular/router";
 import { Component, OnInit } from "@angular/core";
 import { UsuarioService } from "src/app/services/UsuarioService";
@@ -14,7 +15,8 @@ export class CadUsuarioPage implements OnInit {
   
   constructor(
     private _usuarioService: UsuarioService,
-    private _route: Router
+    private _route: Router,
+    private _alerta: AlertController
   ) {}
 
   ngOnInit() {}
@@ -26,9 +28,12 @@ export class CadUsuarioPage implements OnInit {
       console.log(res);
     });
 
+    
     let mensagemAlerta: string =
-      "Cadastro realizado com sucesso. Bem vindo " + this.usuario.nome;
-    alert(mensagemAlerta);
+      `Cadastro realizado.\nBemvindo(a) ${this.usuario.nome}`
+    const alerta = await this._alerta.create({header: 'Sucesso',message: mensagemAlerta, buttons:['OK']
+    });
+    await alerta.present()
     this._route.navigate(["/login"]);
   }
 }
