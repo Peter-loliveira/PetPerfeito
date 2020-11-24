@@ -20,7 +20,7 @@ export class PagPrincipalPage implements OnInit {
     private _petsService: PetsService
   ) {
     
-    this._usuarioLogado = this._usuarioService.retornarUsuarioLogado();
+    
 
   }
 
@@ -41,6 +41,7 @@ export class PagPrincipalPage implements OnInit {
   }
 
   async obterListaPets() {
+    this._usuarioLogado = this._usuarioService.retornarUsuarioLogado();
     const listaPets = await this._petsService.listar();
     this.pets = listaPets;
     console.log(this.pets);
