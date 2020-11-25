@@ -13,8 +13,16 @@ ion-tab-button:hover {
   color: var(--pp-azul);
 }
 
-img {
-  width: 1.4rem;
-  fill: green;
+
+ion-label {
+  font-size: 10px;
 }
 
+#img-tabs {
+  width: 1.6rem;
+  margin-top: .1rem;
+}
+
+.icones{
+  margin-top: -.3rem;
+}

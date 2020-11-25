@@ -82,7 +82,12 @@ ion-item {
     height: 2.4rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+}
+#campo-com-linha {
+    align-items: center;    border-bottom: 1px solid rgba(128, 128, 128, 0.151);
+}
+#campo-sem-linha {
+  border-bottom: 0px;
 }
 
 .Selects {
