@@ -39,6 +39,7 @@ export class ChatPage implements OnInit {
   //   this.content.scrollTo(0, contentEnd, 300);
   // }
   sendMessage(){
+    this.userName = this.usuarioLogado.nome;
     var messagesRef = firebase.database().ref().child("mensagens");
     messagesRef.push({mensagem: this.mensagem, nome: this.userName });
     this.mensagem = "";

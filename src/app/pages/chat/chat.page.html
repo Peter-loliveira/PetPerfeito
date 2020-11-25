@@ -10,7 +10,7 @@
 <ion-content  padding id="content">
   <ion-card *ngFor="let mensagem of mensagens">
     <ion-card-header>
-      {{usuarioLogado.nome}} diz:
+      {{mensagem.nome}} diz:
     </ion-card-header>
     <ion-card-content>
       {{mensagem.mensagem}}
