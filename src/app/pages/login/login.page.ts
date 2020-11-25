@@ -1,3 +1,4 @@
+import { AlertController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -15,7 +16,8 @@ export class LoginPage implements OnInit {
   constructor(
     private _route: Router, 
     private _loginService: LoginService, 
-    private _usuarioService: UsuarioService) { }
+    private _usuarioService: UsuarioService,
+    private _msg:  AlertController) { }
 
   ngOnInit() {
   }
