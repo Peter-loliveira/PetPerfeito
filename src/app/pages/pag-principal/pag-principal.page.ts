@@ -18,9 +18,7 @@ export class PagPrincipalPage implements OnInit {
     private _usuarioService: UsuarioService,
     private _route: Router,
     private _petsService: PetsService
-  ) {
-    
-    
+  ) {  
 
   }
 

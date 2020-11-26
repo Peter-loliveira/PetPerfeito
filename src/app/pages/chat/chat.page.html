@@ -1,9 +1,32 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>chat</ion-title>
-  </ion-toolbar>
+ 
+  <ion-title>
+    Chat - Pet Perfeito
+    <ion-label>{{ usuarioLogado.nome }}</ion-label>
+  </ion-title>
+
 </ion-header>
 
-<ion-content>
-
+<ion-content  padding id="content">
+<ion-card *ngFor="let mensagem of mensagens">
+  <ion-card-header>
+    {{mensagem.nome}} diz:
+  </ion-card-header>
+  <ion-card-content>
+    {{mensagem.mensagem}}
+  </ion-card-content>
+</ion-card>
+<div id="content-end"></div>
 </ion-content>
+
+<ion-footer>
+<ion-toolbar>
+  <ion-input placeholder="Escreva Algo..." [(ngModel)]="mensagem"></ion-input>
+  <ion-buttons slot="end">
+    <button ion-button icon-right (click)="sendMessage()">
+        Enviar
+      <ion-icon name="send"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-toolbar>
+</ion-footer>
