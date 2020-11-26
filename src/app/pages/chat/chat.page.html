@@ -1,33 +1,37 @@
+<ion-header mode = 'md'>
+  <ion-toolbar>
+    <ion-title color = light>Chat - {{ usuarioLogado.nome }}</ion-title>
+    <ion-label></ion-label>
+  </ion-toolbar>
+</ion-header>
+<!-- 
 <ion-header>
- 
   <ion-title>
     Chat - Pet Perfeito
-    <ion-label>{{ usuarioLogado.nome }}</ion-label>
   </ion-title>
+</ion-header> -->
+<ion-content padding id="content-end">
 
-</ion-header>
+  <ion-card mode = 'ios' *ngFor="let mensagem of mensagens">
+    <ion-card-header>
+    <ion-card-title><b>{{mensagem.nome}}</b> diz:</ion-card-title>
+    </ion-card-header>
+    <!-- <ion-card-header> {{mensagem.nome}} diz: </ion-card-header> -->
+    <ion-card-content> {{mensagem.mensagem}} </ion-card-content>
+  </ion-card>
 
-<ion-content  padding id="content">
-<ion-card *ngFor="let mensagem of mensagens">
-  <ion-card-header>
-    {{mensagem.nome}} diz:
-  </ion-card-header>
-  <ion-card-content>
-    {{mensagem.mensagem}}
-  </ion-card-content>
-</ion-card>
-<div id="content-end"></div>
 </ion-content>
 
+
+
 <ion-footer>
-<ion-toolbar>
-  <ion-input placeholder="Escreva Algo..." [(ngModel)]="mensagem"></ion-input>
-  <ion-buttons slot="end">
-    <button ion-button icon-right (click)="sendMessage()">
-        Enviar
-        <!-- Mudar esse icone -->
-      <ion-icon name="send"></ion-icon>
-    </button>
-  </ion-buttons>
-</ion-toolbar>
+  <ion-toolbar id="toolbar-footer">
+    <ion-input placeholder="Digite sua mensagem..." [(ngModel)]="mensagem"></ion-input>
+    <ion-buttons slot="end">
+      <!-- <button ion-button icon-right (click)="sendMessage()"> -->
+        <ion-icon button name="send" (click)="sendMessage()"></ion-icon>
+      <!-- </button> -->
+    </ion-buttons>
+  </ion-toolbar>
+  
 </ion-footer>
