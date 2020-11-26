@@ -7,7 +7,7 @@
 
     <ion-row>
       <ion-col>
-        <ion-item color="var(--pp-preto)">
+        <ion-item  color="var(--pp-preto)">
           <img src="../../../assets/svg/user.svg" alt="" class="inputIcons" />
           <ion-label color="light">Usuário</ion-label>
           <ion-input
@@ -16,19 +16,19 @@
             [(ngModel)]="login.login"
           ></ion-input>
         </ion-item>
-        <ion-item color="var(--pp-preto)">
+        <ion-item class="CamposLogin" color="var(--pp-preto)">
           <img
             src="../../../assets/svg/showpass.svg"
             alt=""
             class="inputIcons"
           />
-          <ion-label color="light">senha</ion-label>
+          <ion-label color="light">Senha</ion-label>
           <ion-input color="light" type="password" [(ngModel)]="login.senha">
           </ion-input>
         </ion-item>
 
         <a href="">
-          <ion-label color=light class="forgetpass">Esqueceu sua senha?</ion-label>
+          <ion-label class="forgetpass">Esqueceu sua senha?</ion-label>
         </a>
       </ion-col>
     </ion-row>
@@ -36,6 +36,7 @@
 
   <div class="logar">
     <ion-button
+      mode = 'ios'
       size="large"
       fill="solid"
       shape="round"
@@ -46,7 +47,7 @@
   </div>
 
   <div class="footer">
-    <ion-button [routerLink]="['/cad-usuario']" fill="solid" shape="round"
+    <ion-button color = primary mode = 'ios' [routerLink]="['/cad-usuario']" fill="solid" shape="round"
       >Cadastrar-se</ion-button
     >
   </div>

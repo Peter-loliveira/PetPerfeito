@@ -38,6 +38,7 @@ h1{
 .forgetpass {
     text-align: right;
     width: 100%;
+    color: var(--pp-bg2)
 }
 
 .logar {
@@ -62,13 +63,6 @@ h1{
     border: 3px solid var(--pp-bordas);
 }
 
-// button {
-//     border-radius: 70px;
-//     padding: 15px;
-//     font-size: 20px;
-//     color: var(--pp-branco);
-//     font-weight: bolder;
-// }
 
 a{
     text-decoration: none;
@@ -84,4 +78,16 @@ img {
     width: 50px;
 }
 
+#bt-cadastrar {
+    --background: var(--pp-bg2);
+    height: 3rem;
+}
 
+.CamposLogin {
+    margin-top: 1rem;
+}
+
+ion-button {
+    --border-width: 20px!important;
+    --border-color: blue!important;
+}
