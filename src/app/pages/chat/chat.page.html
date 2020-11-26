@@ -14,24 +14,25 @@
 
   <ion-card mode = 'ios' *ngFor="let mensagem of mensagens">
     <ion-card-header>
-    <ion-card-title><b>{{mensagem.nome}}</b> diz:</ion-card-title>
+    <ion-card-title>{{mensagem.nome}} diz:</ion-card-title>
     </ion-card-header>
-    <!-- <ion-card-header> {{mensagem.nome}} diz: </ion-card-header> -->
-    <ion-card-content> {{mensagem.mensagem}} </ion-card-content>
+    <ion-card-content id="textoMensagem"> {{mensagem.mensagem}} </ion-card-content>
+    <ion-card-content id="horaMensagem"> {{mensagem.hora}} </ion-card-content>
+
   </ion-card>
 
 </ion-content>
 
-
-
 <ion-footer>
   <ion-toolbar id="toolbar-footer">
-    <ion-input placeholder="Digite sua mensagem..." [(ngModel)]="mensagem"></ion-input>
+    <ion-input class="campos-enviar-mensagem" placeholder="Digite sua mensagem..." [(ngModel)]="mensagem"></ion-input>
     <ion-buttons slot="end">
       <!-- <button ion-button icon-right (click)="sendMessage()"> -->
-        <ion-icon button name="send" (click)="sendMessage()"></ion-icon>
+        <ion-icon class="campos-enviar-mensagem" name="send" (click)="sendMessage()"></ion-icon>
       <!-- </button> -->
     </ion-buttons>
   </ion-toolbar>
+
+  
   
 </ion-footer>

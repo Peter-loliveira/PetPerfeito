@@ -40,3 +40,20 @@ ion-content {
       display: none;
     }
   }
+
+  #textoMensagem {
+      padding-top: 0;
+      padding-bottom: 0;
+  }
+
+  #horaMensagem {
+      color: gray;
+      font-size: .8rem;
+      text-align: right;
+      height: 1.5rem;
+      padding: 0 .5rem;
+  }
+
+  ion-input {
+      width: 95%;
+  }
