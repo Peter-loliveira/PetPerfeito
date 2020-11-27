@@ -1,6 +1,29 @@
-ion-tab-bar,
+// ion-tab-button {
+//   background-color: var(--pp-bordas);
+//   padding-top: .5rem;
+//   }
+
+// ion-label,
+// ion-icon {
+//   color: var(--pp-preto);
+// }
+
+// ion-label {
+//   font-size: 10px;
+// }
+
+// #img-tabs {
+//   width: 1.6rem;
+//   margin-top: .1rem;
+// }
+
+// .icones{
+//   margin-top: -.3rem;
+// }
+
 ion-tab-button {
   background-color: var(--pp-bgTabs);
+  padding-top: .3rem;
   // background-color: var(--pp-bg2);
 }
 
@@ -8,11 +31,6 @@ ion-label,
 ion-icon {
   color: var(--pp-branco);
 }
-
-ion-tab-button:hover {
-  color: var(--pp-azul);
-}
-
 
 ion-label {
   font-size: 10px;
