@@ -42,11 +42,11 @@ export class PetsService implements IPetsService {
   }
 
   remover(Pets_id: number): void {
-    throw new Error("Method not implemented.");
+    throw new Error("Metodo não implementado.");
   }
 
   editar(pets: Pets): Observable<Pets> {
-    throw new Error("Method not implemented.");
+    throw new Error("Metodo não implementado.");
   }
 
   listar(): Promise<Pets[]> {
@@ -64,6 +64,10 @@ export class PetsService implements IPetsService {
   }
 
   buscar(pets_id: number): Observable<Pets> {
-    throw new Error("Method not implemented.");
+    throw new Error("Metodo não implementado.");
+  }
+
+  filtrar(dados:[]): Observable<Pets>{
+    throw new Error("Metodo não implementado.");
   }
 }
