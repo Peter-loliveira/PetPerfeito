@@ -31,7 +31,7 @@ h1{
 .label-campos {
     color: var(--pp-branco);
     font-size: 15px;
-    padding-top: 5px;
+    // padding-top: 5px;
 }
 
 .label-branco {
@@ -82,12 +82,9 @@ ion-item {
     display: flex;
     justify-content: space-between;
 }
-#campo-com-linha {
+.campo-com-linha {
     align-items: center;    
     border-bottom: 1px solid rgba(128, 128, 128, 0.151);
-}
-#campo-sem-linha {
-  border-bottom: 0px;
 }
 
 .Selects {

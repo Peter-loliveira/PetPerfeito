@@ -6,16 +6,16 @@
       <img src="../../../assets/svg/logo.svg" alt="" class="logo">
     </div>
 
-    <ion-row id = 'campo-com-linha'>
+    <ion-row class = 'campo-com-linha'>
       <ion-col>
-        <ion-item mode = 'md' color=var(--pp-preto)>
+        <ion-item color=var(--pp-preto)>
           <ion-label class="label-campos">Nome</ion-label>
           <ion-input class="iputNome" color=light type="text" [(ngModel)]="pet.nome"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
 
-    <ion-row id = 'campo-com-linha'>
+    <ion-row class = 'campo-com-linha'>
       <ion-col>
         <ion-item color=var(--pp-preto)>
           <ion-label class="label-campos">Nascimento</ion-label>
@@ -25,7 +25,7 @@
       </ion-col>
     </ion-row>
 
-    <ion-row id = 'campo-com-linha'>
+    <ion-row class = 'campo-com-linha'>
       <ion-col class="Selects">
         <ion-item color=var(--pp-preto)>        
           <ion-label class="label-campos">Tipo</ion-label>
@@ -39,7 +39,7 @@
       </ion-col>
     </ion-row>
 
-    <ion-row id = 'campo-com-linha'>
+    <ion-row class = 'campo-com-linha'>
       <ion-col class="Selects">
         <ion-item color=var(--pp-preto)>
           <ion-label class="label-campos">Raça</ion-label>
@@ -60,7 +60,7 @@
       </ion-col>
     </ion-row>
 
-    <ion-row id = 'campo-com-linha'>
+    <ion-row class = 'campo-com-linha'>
       <ion-col class="Selects">
         <ion-item color=var(--pp-preto)>
           <ion-label class="label-campos">Sexo</ion-label>
@@ -82,6 +82,8 @@
           </ion-item>
       </ion-col>
     </ion-row>
+
+    
     <div>
       <ion-button size="large" fill='solid' shape="round" mode='ios' (click)='cadastrarPet()'>Cadastrar
         Pet
