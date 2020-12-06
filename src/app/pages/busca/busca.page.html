@@ -4,7 +4,7 @@
       <h1>localizados</h1>
       <img src="../../../assets/svg/logo.svg" alt="" class="logo" />
     </div>
-    <ion-row>
+    <ion-row >
       <ion-col>
         <ion-toolbar id="barra-botao-filtro" color = black>
           <ion-buttons slot="end"> 
@@ -13,13 +13,13 @@
         </ion-toolbar>
 
         <ion-slides>
-
           <ion-slide *ngFor = 'let pet of pets'>
+            <img button class="img-chat" src="../../../assets/svg/chatHeart2.svg" (click)="goChat()" alt="">
             <div class="slide">
               <h2 class="nomePet">{{pet.nome}}</h2>
               <img class="photoPet" src="../../../assets/photos/c/01.png" />
               <p class="DescPet">
-                Sou temperamental, mais adoro fazer novas amizades. Procuro uma namorada.
+                {{pet.sobre}}
               </p>
             </div>
           </ion-slide>

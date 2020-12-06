@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { UsuarioService } from 'src/app/services/UsuarioService';
 import { Usuario } from 'src/models/Usuario';
 import { ModalDeBuscasComponent } from "./../../components/modal-de-buscas/modal-de-buscas.component";
@@ -30,6 +31,7 @@ export class BuscaPage implements OnInit {
     private _usuarioService: UsuarioService,
     private _petsService: PetsService,
     private _modalController: ModalController,
+    private _route: Router
   ) {}
 
   ngOnInit() {}
@@ -70,5 +72,9 @@ export class BuscaPage implements OnInit {
     
     this.pets = listaPets;
     console.log(this.pets);
+  }
+
+  goChat(){
+    this._route.navigate(["/tabs/chat"]);
   }
 }
