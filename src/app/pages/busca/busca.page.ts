@@ -1,3 +1,5 @@
+import { UsuarioService } from 'src/app/services/UsuarioService';
+import { Usuario } from 'src/models/Usuario';
 import { ModalDeBuscasComponent } from "./../../components/modal-de-buscas/modal-de-buscas.component";
 import { Component, OnInit } from "@angular/core";
 import { ModalController } from "@ionic/angular";
@@ -10,13 +12,11 @@ import { PetsService } from 'src/app/services/PetsService';
   styleUrls: ["./busca.page.scss"],
 })
 export class BuscaPage implements OnInit {
-
-
+  private _usuarioLogado: Usuario = new Usuario();
+  public pets: Pets[] = new Array<Pets>();
 
   filtros = [
     {
-      name: 'Peter Lange',
-      balance: 1000,
       tipo: '',
       raca: '',
       sexo: '',
@@ -25,9 +25,9 @@ export class BuscaPage implements OnInit {
     },
   ]
 
-  public pets: Pets[] = new Array<Pets>();
 
   constructor(
+    private _usuarioService: UsuarioService,
     private _petsService: PetsService,
     private _modalController: ModalController,
   ) {}
@@ -57,7 +57,17 @@ export class BuscaPage implements OnInit {
   }
 
   async obterListaPets() {
-    const listaPets = await this._petsService.listar();
+    this._usuarioLogado = this._usuarioService.retornarUsuarioLogado();
+    console.log('ANTES LISTA PETS 1');
+    
+    let listaPets = await this._petsService.filtrarPets();
+    console.log('DEPOIS LISTA PETS 1');
+    
+    console.log('ANTES LISTA PETS 2');
+    listaPets = JSON.parse(localStorage.getItem('FiltroPets'));
+    console.log(listaPets);
+    console.log('DEPOIS LISTA PETS 2');
+    
     this.pets = listaPets;
     console.log(this.pets);
   }

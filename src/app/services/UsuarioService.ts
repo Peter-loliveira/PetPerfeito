@@ -20,7 +20,6 @@ export class UsuarioService implements IUsuarioService {
         const usuario: Usuario = this.retornarUsuarioLogado();
         return this._httpClient.get<Usuario>(`${this.apiUrl}/${usuario.id}`);
     }
-    
 
     cadastrar(usuario: Usuario): Observable<Usuario> {
         if (!usuario.nome) throw new Error ('O campo Nome é obrigatorio.')
@@ -47,7 +46,7 @@ export class UsuarioService implements IUsuarioService {
 
     retornarUsuarioLogado(): Usuario {
         let usuario:Usuario = JSON.parse(localStorage.getItem('usuarioLogado'));
-        localStorage.getItem('usuarioLogado');
+        // localStorage.getItem('usuarioLogado');
         return usuario;
     }
 
