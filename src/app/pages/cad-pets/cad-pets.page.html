@@ -31,7 +31,7 @@
           <ion-label class="label-campos">Tipo</ion-label>
         </ion-item>
         <ion-item color=var(--pp-preto)>
-          <ion-select class='label-branco' [(ngModel)]="pet.tipo">
+          <ion-select mode = 'ios' cancelText = 'Cancelar' okText = 'OK' class='label-branco' [(ngModel)]="pet.tipo">
             <ion-select-option value="Cachorro">Cachorro</ion-select-option>
             <ion-select-option value="Gato">Gato</ion-select-option>
           </ion-select>
@@ -45,7 +45,7 @@
           <ion-label class="label-campos">Raça</ion-label>
         </ion-item>
         <ion-item color=var(--pp-preto)>
-          <ion-select class="label-branco" [(ngModel)]="pet.raca">
+          <ion-select mode = 'ios' cancelText = 'Cancelar' okText = 'OK' class="label-branco" [(ngModel)]="pet.raca">
             <ion-select-option value="Akita">Akita</ion-select-option>
             <ion-select-option value="Beagle">Beagle</ion-select-option>
             <ion-select-option value="Chihuahua">Chihuahua</ion-select-option>
@@ -66,9 +66,9 @@
           <ion-label class="label-campos">Sexo</ion-label>
         </ion-item>
         <ion-item color=var(--pp-preto)>
-          <ion-select class="label-branco" [(ngModel)]="pet.sexo">
-            <ion-select-option value="M">Macho</ion-select-option>
+          <ion-select mode = 'ios' cancelText = 'Cancelar' okText = 'OK' class="label-branco" [(ngModel)]="pet.sexo">
             <ion-select-option value="F">Fêmea</ion-select-option>
+            <ion-select-option value="M">Macho</ion-select-option>
           </ion-select>
         </ion-item>
       </ion-col>

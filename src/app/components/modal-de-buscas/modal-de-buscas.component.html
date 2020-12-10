@@ -14,7 +14,7 @@
   <ion-row>
     <ion-col>Tipo</ion-col>
     <ion-col>
-      <ion-select [formControl]="tipoInput">
+      <ion-select mode = 'ios' cancelText = 'Cancelar' okText = 'OK' [formControl]="tipoInput">
         <ion-select-option value="Cachorro">Cachorro</ion-select-option>
         <ion-select-option value="Gato">Gato</ion-select-option>
       </ion-select>
@@ -24,7 +24,7 @@
   <ion-row>
     <ion-col>Raça</ion-col>
     <ion-col>
-      <ion-select [formControl]="racaInput">
+      <ion-select mode = 'ios' cancelText = 'Cancelar' okText = 'OK' [formControl]="racaInput">
         <ion-select-option value="Akita">Akita</ion-select-option>
         <ion-select-option value="Beagle">Beagle</ion-select-option>
         <ion-select-option value="Chihuahua">Chihuahua</ion-select-option>
@@ -41,9 +41,9 @@
   <ion-row>
     <ion-col>Sexo</ion-col>
     <ion-col>
-      <ion-select [formControl]="sexoInput">
-        <ion-select-option value="M">Macho</ion-select-option>
+      <ion-select mode = 'ios' cancelText = 'Cancelar' okText = 'OK' [formControl]="sexoInput">
         <ion-select-option value="F">Fêmea</ion-select-option>
+        <ion-select-option value="M">Macho</ion-select-option>
       </ion-select>
     </ion-col>
   </ion-row>

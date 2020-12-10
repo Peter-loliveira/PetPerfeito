@@ -18,9 +18,9 @@ export class BuscaPage implements OnInit {
 
   filtros = [
     {
-      tipo: '',
-      raca: '',
-      sexo: '',
+      tipo: '1',
+      raca: '1',
+      sexo: '1',
       idade: 0,
 
     },
@@ -44,7 +44,7 @@ export class BuscaPage implements OnInit {
   async openModal(filtro){
     const modal = await this._modalController.create({
       component: ModalDeBuscasComponent,
-      componentProps: {tipo: filtro.tipo}
+      componentProps: {tipo: filtro}
     });
     await modal.present();
 

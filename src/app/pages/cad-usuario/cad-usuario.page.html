@@ -1,145 +1,3 @@
-<!-- <body>
-  <div class="campos-Cad">
-    <ion-header class="superior">
-      <h1>Usuário</h1>
-      <img src="../../../assets/svg/logo.svg" alt="" class="logo" />
-    </ion-header>
-
-    <ion-row>
-      <ion-col>
-        <ion-item lines = 'none' lines="none" color="var(--pp-preto)">
-          <ion-label color="light" class="label-campos">Nome:</ion-label>
-          <ion-input
-            color="light"
-            class="iputNome"
-            [(ngModel)]="usuario.nome"
-            type="text"
-          ></ion-input>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col class="Selects">
-        <ion-item lines = 'none' color=var(--pp-preto)>
-          <ion-label class="label-campos">Sexo</ion-label>
-        </ion-item>
-        <ion-item lines = 'none' color=var(--pp-preto)>
-          <ion-select class="label-branco">
-            <ion-select-option value="M">Masculino</ion-select-option>
-            <ion-select-option value="F">Feminino</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col>
-        <ion-item lines = 'none' lines="none" color="var(--pp-preto)">
-          <ion-label color="light" class="label-campos">Nascimento:</ion-label>
-          <ion-datetime
-            color="light"
-            displayFormat="DD/MM/YYYY"
-            cancel-text="Cancela"
-            done-text="OK"
-            class="label-campos"
-            [(ngModel)]="dataNascimentoUsuario"
-          >
-          </ion-datetime>
-          <ion-icon color="light" name="caret-down-outline"></ion-icon>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col>
-        <ion-item lines = 'none' lines="none" color="var(--pp-preto)">
-          <ion-label color="light" class="label-campos">E-mail:</ion-label>
-          <ion-input
-            color="light"
-            [(ngModel)]="usuario.email"
-            type="email"
-          ></ion-input>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col>
-        <ion-item lines = 'none' lines="none" color="var(--pp-preto)">
-          <ion-label color="light" class="label-campos">CPF:</ion-label>
-          <ion-input
-            color="light"
-            [(ngModel)]="usuario.cpf"
-            type="text"
-          ></ion-input>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col>
-        <ion-item lines = 'none' lines="none" color="var(--pp-preto)">
-          <ion-label color="light">Login:</ion-label>
-          <ion-input
-            color="light"
-            [(ngModel)]="usuario.login"
-            type="text"
-          ></ion-input>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col>
-        <ion-item lines = 'none' lines="none" color="var(--pp-preto)">
-          <ion-label color="light" class="label-campos campoSenha"
-            >Senha:
-          </ion-label>
-          <ion-input
-            color="light"
-            [(ngModel)]="usuario.senha"
-            type="password"
-          ></ion-input>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col>
-        <ion-item lines = 'none'
-          id="campo-final-sem-linha"
-          lines="none"
-          color="var(--pp-preto)"
-        >
-          <ion-label color="light" class="label-campos campoSenha"
-            >Confirme:</ion-label
-          >
-          <ion-input
-            color="light"
-            [(ngModel)]="usuario.confirmarSenha"
-            type="password"
-          ></ion-input>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-
-    <div>
-      <ion-button
-        mode="ios"
-        size="large"
-        fill="solid"
-        shape="round"
-        (click)="criarUsuario();"
-        >
-        Cadastrar
-        </ion-button
-      >
-    </div>
-  </div>
-</body> -->
-
-
 <body>
   <div class="campos-Cad">
     
@@ -163,9 +21,9 @@
           <ion-label class="label-campos">Sexo</ion-label>
         </ion-item>
         <ion-item lines = 'none' color=var(--pp-preto)>
-          <ion-select class="label-branco" [(ngModel)]="usuario.sexo">
-            <ion-select-option value="M">Masculino</ion-select-option>
+          <ion-select mode = 'ios' cancelText = 'Cancelar' okText = 'OK' class="label-branco" [(ngModel)]="usuario.sexo">
             <ion-select-option value="F">Feminino</ion-select-option>
+            <ion-select-option value="M">Masculino</ion-select-option>
           </ion-select>
         </ion-item>
       </ion-col>
@@ -175,7 +33,7 @@
       <ion-col>
         <ion-item lines = 'none' color=var(--pp-preto)>
           <ion-label class="label-campos">Nascimento</ion-label>
-          <ion-datetime displayFormat="DD/MM/YYYY" cancel-text='Cancela' done-text='OK' [(ngModel)]="dataNascimentoUsuario">
+          <ion-datetime displayFormat="DD/MM/YYYY" cancel-text='Cancelar' done-text='OK' [(ngModel)]="dataNascimentoUsuario">
           </ion-datetime>
           <ion-icon name="caret-down-outline"></ion-icon>
         </ion-item>

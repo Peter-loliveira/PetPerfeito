@@ -22,7 +22,10 @@ export class ModalDeBuscasComponent implements OnInit {
   sexoInput = new FormControl;
   idadeInput = new FormControl;
 
-  constructor( private modal: ModalController ) { }
+  constructor( private modal: ModalController ) {
+    
+    
+   }
 
   ngOnInit() {}
 
